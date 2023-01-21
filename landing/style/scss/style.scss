@@ -1,53 +1,53 @@
 $bgcolor: #000;
-$base_color:rgb(255, 255, 255);
-%btn{
+$base_color: rgb(255, 255, 255);
+%btn {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
-%font_regular18{
+%font_regular18 {
   font-size: 18px;
   font-family: Noto sans;
   color: $base_color;
-  weight:500;
+  weight: 500;
 }
-%font_regular20{
+%font_regular20 {
   font-size: 20px;
   font-family: Noto sans;
   color: $base_color;
-  weight:500;
+  weight: 500;
 }
-%font_title64{
+%font_title64 {
   font-size: 64px;
   font-family: Montserrat;
   color: $base_color;
-  weight:700;
+  weight: 700;
 }
-%font_title35{
+%font_title35 {
   font-size: 35px;
   font-family: Montserrat;
   color: $base_color;
-  weight:700;
+  weight: 700;
 }
-%font_regular30{
-font-family: 'Noto Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 30px;
+%font_regular30 {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
 }
-%font_regular24{
-  font-family: 'Noto Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
+%font_regular24 {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
 }
-%font_regular51{
-  font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 51px;
-color: $base_color;
+%font_regular51 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 51px;
+  color: $base_color;
 }
 html,
 body {
@@ -68,6 +68,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 // кнопка svg+text
 .i_btn_text {
@@ -89,14 +90,15 @@ body {
   }
 }
 // кнопка svg+border
-.i_btn{
+.i_btn {
   @extend %btn;
-border: 1.5px solid $base_color;
-border-radius: 8px;
-background-color: transparent;
-padding: 0 6px;
-height: 51.3px;
-.i_btn__svg{}
+  border: 1.5px solid $base_color;
+  border-radius: 8px;
+  background-color: transparent;
+  padding: 0 6px;
+  height: 51.3px;
+  .i_btn__svg {
+  }
 }
 // Лого
 .logo {
@@ -117,7 +119,7 @@ height: 51.3px;
   }
 }
 // Footer
-.footer{
+.footer {
   margin-top: auto;
   display: flex;
   align-items: center;
@@ -125,58 +127,52 @@ height: 51.3px;
   padding: 8px 0;
   // background-color: rgb(113, 231, 119);
 
-.footer__text{
-  width: 50%;
-  @extend %font_title35;
-}
-  .footer__btn{
+  .footer__text {
+    width: 50%;
+    @extend %font_title35;
+  }
+  .footer__btn {
     display: flex;
     width: 50%;
-    gap:16px;
+    gap: 16px;
     justify-content: center;
   }
 }
 // страницы
-.page_1_intro {
+.page_100 {
   width: 100%;
   height: 100vh;
   background-color: $bgcolor;
   overflow: hidden;
+  position: relative;
 }
-.page_2_join{
+.page_50 {
   width: 100%;
   height: 50vh;
   background-color: $bgcolor;
   overflow: hidden;
 }
-.page_3_mission {
-  width: 100%;
-  height: 100vh;
-  background-color: $bgcolor;
-  overflow: hidden;
-}
 
-.content{
-display: flex;
+.content {
+  display: flex;
 
-// background-color: gray;
+  // background-color: gray;
 }
-.info_col{
+.info_col {
   position: relative;
-  // background-color: rgb(119, 102, 6);
   display: flex;
   flex-direction: column;
-  width:50%;
+  width: 50%;
   row-gap: 129px;
-  
-  .info_col__title{
+
+  .info_col__title {
     @extend %font_title64;
     height: 50%;
     display: flex;
-align-items: flex-end;
+    align-items: flex-end;
     // background-color: rgb(95, 13, 95);
   }
-  .info_col__info{
+  .info_col__info {
     @extend %font_regular20;
     height: 50%;
     // background-color: rgb(13, 75, 54);
@@ -184,10 +180,10 @@ align-items: flex-end;
     gap: 16px;
     align-items: flex-start;
   }
-  .info_col__image{
-position: relative;
+  .info_col__image {
+    position: relative;
   }
-  .info_col__blur{
+  .info_col__blur {
     position: absolute;
     top: 0;
     right: 0;
@@ -196,68 +192,68 @@ position: relative;
     background: rgba(96, 92, 234, 0.5);
     filter: blur(50px);
   }
-  .info_col__text{
-padding-top: 30px;
-padding-left: 20px; 
-// width:65%;
+  .info_col__text {
+    padding-top: 30px;
+    padding-left: 20px;
+    // width:65%;
   }
 }
-.info_image{
+.info_image {
   width: 50%;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   // background-color: rgb(220, 220, 221);
-  .info_image__blur{
+  .info_image__blur {
     position: absolute;
     top: -20%;
     right: -10%;
     width: 90%;
     height: 95%;
     background: rgba(250, 0, 255, 0.2);
-filter: blur(125px);
-transform: rotate(-105.26deg);
+    filter: blur(125px);
+    transform: rotate(-105.26deg);
   }
 }
-.image{
+.image {
   z-index: 10;
 }
 // ======================= 2 страница =======================
 
 // карточка
-.cards{
+.cards {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 81px;
   padding-top: 61px;
 }
-.card{
+.card {
   border: 2px solid rgba(255, 255, 255, 0.5);
-border-radius: 21.3671px;
-width: 50%;
-height:312px;
-display: flex;
+  border-radius: 21.3671px;
+  width: 50%;
+  height: 312px;
+  display: flex;
 
-justify-content: center;
-align-items: center;
-  .card_info{
+  justify-content: center;
+  align-items: center;
+  .card_info {
     flex-direction: column;
-row-gap: 30px;
+    row-gap: 30px;
     width: 70%;
     @extend %font_regular30;
     display: flex;
     align-items: flex-start;
   }
-  .card_link{
+  .card_link {
     width: fit-content;
-@extend %font_regular24;
-display: flex;
+    @extend %font_regular24;
+    display: flex;
     align-items: flex-start;
-    color:white;
+    color: white;
   }
-  .card_btn{
+  .card_btn {
     width: fit-content;
     @extend %font_regular24;
     display: flex;
@@ -265,62 +261,117 @@ display: flex;
     border: none;
     outline: none;
     background-color: transparent;
-    color:white;
+    color: white;
     text-decoration: underline;
   }
 }
+
+// ======================= 3 страница =======================
 // content
-.mission{
+.mission {
   margin: auto 0;
   display: flex;
   gap: 10%;
 }
 
-.mission_left{
+.mission_left {
   position: relative;
   height: 100%;
-  width:60%;
+  width: 60%;
   // background-color: aqua;
-  
-  .mission_left__image{
+
+  .mission_left__image {
     position: absolute;
     top: -170px;
-    left:-15%;
-    transform: rotate3d(0,0,1,90deg);
-  } 
+    left: -15%;
+    transform: rotate3d(0, 0, 1, 90deg);
+  }
 }
 
-.mission_right{
+.mission_right {
   position: relative;
-  width:40%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   row-gap: 23px;
-  .mission_right__blur{
+  .mission_right__blur {
     position: absolute;
-    top:0;
-    right:50%;
+    top: 0;
+    right: 50%;
     width: 85px;
-    height: 85px;    
-    background: #F101BF;
+    height: 85px;
+    background: #f101bf;
     opacity: 0.7;
     filter: blur(50px);
   }
-  .mission_right__title{
-    width: 70%;
+  .mission_right__title {
+    width: 85%;
     @extend %font_regular51;
     z-index: 10;
   }
-  .mission_right__info{
-    width: 70%;
+  .mission_right__info {
+    width: 85%;
     @extend %font_regular18;
   }
 }
-
-.page_4{
-  display: flex;
-}
-// ======================= 3 страница =======================
 // ======================= 4 страница =======================
+.background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 80%;
+z-index: 0;
+  .background__gradient {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      179.83deg,
+      #000000 -3.1%,
+      rgba(0, 0, 0, 0) 56.76%,
+      #000000 83.92%
+    );
+  }
+
+  .background__covered {
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+  }
+}
+
+
+
+.id_scanner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: flex-end;
+  justify-content:space-between;
+z-index: 10;
+  .id_scanner__images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58%;
+    justify-content: space-between;
+  }
+
+  .id_scanner__info {
+    margin:100px 0;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    row-gap: 23px;
+    .id_scanner__title {
+      @extend %font_regular51;
+    }
+    .id_scanner__text {
+      @extend %font_regular18;
+    }
+  }
+}
 // ======================= 5 страница =======================
 // ======================= 6 страница =======================
