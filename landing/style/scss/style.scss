@@ -294,6 +294,7 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 23px;
+
   .mission_right__blur {
     position: absolute;
     top: 0;
@@ -320,7 +321,7 @@ body {
   top: 0;
   width: 100%;
   height: 80%;
-z-index: 0;
+  z-index: 0;
   .background__gradient {
     position: absolute;
     z-index: 100;
@@ -342,15 +343,13 @@ z-index: 0;
   }
 }
 
-
-
 .id_scanner {
   display: flex;
   width: 100%;
   height: 100%;
   align-items: flex-end;
-  justify-content:space-between;
-z-index: 10;
+  justify-content: space-between;
+  z-index: 10;
   .id_scanner__images {
     display: flex;
     align-items: center;
@@ -360,7 +359,7 @@ z-index: 10;
   }
 
   .id_scanner__info {
-    margin:100px 0;
+    margin: 100px 0;
     display: flex;
     flex-direction: column;
     width: 25%;
@@ -374,4 +373,97 @@ z-index: 10;
   }
 }
 // ======================= 5 страница =======================
+.tool {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .tool__blur{
+    top: -30%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
+    filter: blur(125px);
+    transform: rotate(5.78deg);
+    opacity: .2;
+    z-index: 0;
+  }
+  .tool__info {
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: fit-content;
+    flex-direction: column;
+    row-gap: 23px;
+    top: 30%;
+  }
+  .tool__title {
+    max-width:497px;
+    @extend %font_regular51;
+    z-index: 10;
+  }
+  .tool__text {
+    width: 80%;
+    max-width:395px;
+    @extend %font_regular18;
+    z-index: 10;
+  }
+  .tool__container {
+    position: relative;
+    width: 50%;
+    height: 100%;
+  }
+  .tool__components {
+    position: absolute;
+    max-width: 700px;
+    max-height: 550px;
+    width: 700px;
+    height: 550px;
+    top: 50%;
+    right:0;
+transform: translate3d(0%,-50%,0);
+  }
+  .tool__trend,
+  .tool__trend2,
+  .tool__trends,
+  .tool__bar,
+  .tool__bar2,
+  .tool__indicator,
+  .tool__diagram {
+    position: absolute;
+  }
+  .tool__trend {
+    top: 0%;
+    right: 20%;
+    // transform: translateX(-60%);
+  }
+  .tool__diagram {
+    left: 19%;
+    top: 30%;
+  }
+  .tool__bar2 {
+    top: 30%;
+    right: 10%;
+  }
+  .tool__trends {
+    top: 40%;
+    left: 0%;
+  }
+  .tool__trend2 {
+    top: 49%;
+    right: 35%;
+    z-index: 1;
+  }
+  .tool__bar {
+    top: 69%;
+    left: 26%;
+  }
+  .tool__indicator {
+    top: 100%;
+    right: 0;
+    transform: translateY(-100%);
+  }
+}
 // ======================= 6 страница =======================

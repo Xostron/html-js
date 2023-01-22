@@ -4,7 +4,7 @@
   justify-content: center;
   cursor: pointer; }
 
-.i_btn_text, .mission_right .mission_right__info, .id_scanner .id_scanner__info .id_scanner__text {
+.i_btn_text, .mission_right .mission_right__info, .id_scanner .id_scanner__info .id_scanner__text, .tool .tool__text {
   font-size: 18px;
   font-family: Noto sans;
   color: white;
@@ -40,7 +40,7 @@
   font-weight: 400;
   font-size: 24px; }
 
-.mission_right .mission_right__title, .id_scanner .id_scanner__info .id_scanner__title {
+.mission_right .mission_right__title, .id_scanner .id_scanner__info .id_scanner__title, .tool .tool__title {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -286,5 +286,80 @@ body {
     flex-direction: column;
     width: 25%;
     row-gap: 23px; }
+
+.tool {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  .tool .tool__blur {
+    top: -30%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
+    filter: blur(125px);
+    transform: rotate(5.78deg);
+    opacity: .2;
+    z-index: 0; }
+  .tool .tool__info {
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: fit-content;
+    flex-direction: column;
+    row-gap: 23px;
+    top: 30%; }
+  .tool .tool__title {
+    max-width: 497px;
+    z-index: 10; }
+  .tool .tool__text {
+    width: 80%;
+    max-width: 395px;
+    z-index: 10; }
+  .tool .tool__container {
+    position: relative;
+    width: 50%;
+    height: 100%; }
+  .tool .tool__components {
+    position: absolute;
+    max-width: 700px;
+    max-height: 550px;
+    width: 700px;
+    height: 550px;
+    top: 50%;
+    right: 0;
+    transform: translate3d(0%, -50%, 0); }
+  .tool .tool__trend,
+  .tool .tool__trend2,
+  .tool .tool__trends,
+  .tool .tool__bar,
+  .tool .tool__bar2,
+  .tool .tool__indicator,
+  .tool .tool__diagram {
+    position: absolute; }
+  .tool .tool__trend {
+    top: 0%;
+    right: 20%; }
+  .tool .tool__diagram {
+    left: 19%;
+    top: 30%; }
+  .tool .tool__bar2 {
+    top: 30%;
+    right: 10%; }
+  .tool .tool__trends {
+    top: 40%;
+    left: 0%; }
+  .tool .tool__trend2 {
+    top: 49%;
+    right: 35%;
+    z-index: 1; }
+  .tool .tool__bar {
+    top: 69%;
+    left: 26%; }
+  .tool .tool__indicator {
+    top: 100%;
+    right: 0;
+    transform: translateY(-100%); }
 
 /*# sourceMappingURL=style.css.map */
