@@ -21,3 +21,5 @@ inputs.forEach((input) => {
 
 // *************анимация page mission
 // *************анимация cookie
+const cookie = document.querySelector("cookie")
+console.log("cookie", cookie)

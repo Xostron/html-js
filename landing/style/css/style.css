@@ -4,6 +4,12 @@
   justify-content: center;
   cursor: pointer; }
 
+.cookie__text, .btn_gray {
+  font-size: 14px;
+  font-family: Noto sans;
+  color: white;
+  weight: 400; }
+
 .i_btn_text, .footer_font18, .mission_right .mission_right__info, .id_scanner .id_scanner__info .id_scanner__text, .tool .tool__text, .qr .qr__info .qr__text, .background3 .background3__text_arrow, .background3 .background3__text, .ordering__info .ordering__text, .form_header .form_header__text, .user_form__area,
 .user_form__input, .user_form__button {
   font-size: 18px;
@@ -69,6 +75,16 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  position: relative; }
+
+.container_row {
+  width: 100%;
+  height: 100%;
+  max-width: 88%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: relative; }
 
 .i_btn_text {
@@ -744,5 +760,23 @@ body {
   filter: blur(125px);
   transform: rotate(5.78deg);
   z-index: 1; }
+
+.cookie {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 93px;
+  bottom: 0%;
+  left: 0;
+  background: #212834;
+  z-index: 1000;
+  align-items: center; }
+
+.btn_gray {
+  width: 132px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.5px solid #ffffff;
+  border-radius: 6px; }
 
 /*# sourceMappingURL=style.css.map */
