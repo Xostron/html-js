@@ -703,7 +703,8 @@ body {
   padding: 25px 167px;
   background: black;
   border: 1px solid #ffffff;
-  border-radius: 10px; }
+  border-radius: 10px;
+  cursor: pointer; }
 
 .user_form_row_inputs {
   width: 100%;
@@ -770,13 +771,22 @@ body {
   left: 0;
   background: #212834;
   z-index: 1000;
-  align-items: center; }
+  align-items: center;
+  pointer-events: fill;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-in;
+  transition-duration: 1s; }
+  .cookie.vis {
+    pointer-events: none;
+    opacity: 0.5;
+    transform: translateY(100%); }
 
 .btn_gray {
   width: 132px;
   height: 50px;
   background: rgba(255, 255, 255, 0.1);
   border: 0.5px solid #ffffff;
-  border-radius: 6px; }
+  border-radius: 6px;
+  cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */

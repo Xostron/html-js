@@ -21,5 +21,10 @@ inputs.forEach((input) => {
 
 // *************анимация page mission
 // *************анимация cookie
-const cookie = document.querySelector("cookie")
-console.log("cookie", cookie)
+const cookie = document.querySelector('.cookie')
+setTimeout(()=>{cookie.classList.remove('vis')},500)
+function hiddenCookie(){
+    console.log('hide')
+    cookie.classList.add('vis')
+}
+
