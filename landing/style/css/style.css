@@ -4,13 +4,16 @@
   justify-content: center;
   cursor: pointer; }
 
-.i_btn_text, .mission_right .mission_right__info, .id_scanner .id_scanner__info .id_scanner__text, .tool .tool__text, .qr .qr__info .qr__text, .background3 .background3__text_arrow, .background3 .background3__text {
+.i_btn_text, .mission_right .mission_right__info, .id_scanner .id_scanner__info .id_scanner__text, .tool .tool__text, .qr .qr__info .qr__text, .background3 .background3__text_arrow, .background3 .background3__text, .ordering__info .ordering__text {
   font-size: 18px;
   font-family: Noto sans;
   color: white;
   weight: 500; }
 
-.info_col .info_col__info {
+.info_col .info_col__info, .text_item1,
+.text_item2,
+.text_item3,
+.text_item4 {
   font-size: 20px;
   font-family: Noto sans;
   color: white;
@@ -40,7 +43,7 @@
   font-weight: 400;
   font-size: 24px; }
 
-.mission_right .mission_right__title, .id_scanner .id_scanner__info .id_scanner__title, .tool .tool__title, .qr .qr__info .qr__title, .background3 .background3__title {
+.mission_right .mission_right__title, .id_scanner .id_scanner__info .id_scanner__title, .tool .tool__title, .qr .qr__info .qr__title, .background3 .background3__title, .ordering__info .ordering__title {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -501,5 +504,64 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+
+.ordering__info {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-end; }
+  .ordering__info .ordering__blur {
+    position: absolute;
+    bottom: -200%;
+    right: -10%;
+    width: 286.92px;
+    height: 267.17px;
+    background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
+    opacity: 0.2;
+    filter: blur(125px);
+    transform: rotate(5.78deg); }
+
+.ordering__img {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0); }
+
+.text_item1,
+.text_item2,
+.text_item3,
+.text_item4 {
+  position: absolute;
+  border: 1px solid white;
+  background-color: #000000;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px; }
+
+.text_item1 {
+  width: 266.78px;
+  height: 98.81px;
+  top: 29%;
+  right: 34%; }
+
+.text_item2 {
+  width: 285px;
+  height: 113px;
+  top: 33.5%;
+  left: 28%; }
+
+.text_item3 {
+  width: 185px;
+  height: 91px;
+  top: 61%;
+  right: 28.5%; }
+
+.text_item4 {
+  width: 175.58px;
+  height: 65.37px;
+  top: 67.5%;
+  left: 39%; }
 
 /*# sourceMappingURL=style.css.map */

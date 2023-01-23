@@ -624,13 +624,13 @@ body {
     transform: translate3d(-50%, -80%, 0);
     // z-index: 0;
   }
-  .background3__svg_arrow{
+  .background3__svg_arrow {
     position: absolute;
     top: 55%;
     left: 63%;
     transform: translate3d(-50%, -80%, 0);
   }
-  .background3__text_arrow{
+  .background3__text_arrow {
     position: absolute;
     top: 58%;
     left: 68%;
@@ -641,7 +641,7 @@ body {
     position: absolute;
     bottom: 0%;
     left: 50%;
-    transform: translate3d(-50%,0,0);
+    transform: translate3d(-50%, 0, 0);
     width: 100%;
     max-width: 88%;
     display: flex;
@@ -655,3 +655,76 @@ body {
     @extend %font_regular18;
   }
 }
+// ======================= 7 страница =======================
+.ordering__info {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-end;
+  // background-color: #363636;
+
+  .ordering__blur {
+    position: absolute;
+    bottom: -200%;
+    right: -10%;
+    width: 286.92px;
+    height: 267.17px;
+    background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
+    opacity: 0.2;
+    filter: blur(125px);
+    transform: rotate(5.78deg);
+  }
+  .ordering__title {
+    @extend %font_regular51;
+  }
+  .ordering__text {
+    @extend %font_regular18;
+  }
+}
+.ordering__img {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.text_item1,
+.text_item2,
+.text_item3,
+.text_item4 {
+  position: absolute;
+  border: 1px solid white;
+  background-color: #000000;
+  border-radius: 10px;
+  @extend %font_regular20;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+.text_item1 {
+  width: 266.78px;
+  height: 98.81px;
+  top: 29%;
+  right: 34%;
+}
+.text_item2 {
+  width: 285px;
+  height: 113px;
+  top: 33.5%;
+  left: 28%;
+}
+.text_item3 {
+  width: 185px;
+  height: 91px;
+  top: 61%;
+  right: 28.5%;
+}
+.text_item4 {
+  width: 175.58px;
+  height: 65.37px;
+  top: 67.5%;
+  left: 39%;
+}
+// ======================= 8 страница =======================
+// ======================= 9 страница =======================
