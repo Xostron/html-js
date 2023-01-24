@@ -10,7 +10,7 @@
   color: white;
   weight: 400; }
 
-.i_btn_text, .footer_font18, .mission_right .mission_right__info, .id_scanner .id_scanner__info .id_scanner__text, .tool .tool__text, .qr .qr__info .qr__text, .background3 .background3__text_arrow, .background3 .background3__text, .ordering__info .ordering__text, .form_header .form_header__text, .user_form__area,
+.i_btn_text, .footer_font18, .mission_right__info, .id_scanner .id_scanner__info .id_scanner__text, .tool .tool__text, .qr .qr__info .qr__text, .background3 .background3__text_arrow, .background3 .background3__text, .ordering__info .ordering__text, .form_header .form_header__text, .user_form__area,
 .user_form__input, .user_form__button {
   font-size: 18px;
   font-family: Noto sans;
@@ -50,7 +50,7 @@
   font-weight: 400;
   font-size: 24px; }
 
-.mission_right .mission_right__title, .id_scanner .id_scanner__info .id_scanner__title, .tool .tool__title, .qr .qr__info .qr__title, .background3 .background3__title, .ordering__info .ordering__title, .form_header .form_header__title {
+.mission_right__title, .id_scanner .id_scanner__info .id_scanner__title, .tool .tool__title, .qr .qr__info .qr__title, .background3 .background3__title, .ordering__info .ordering__title, .form_header .form_header__title {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -278,39 +278,74 @@ body {
 
 .mission {
   display: flex;
-  gap: 10%;
-  height: 100%; }
+  width: 100%;
+  height: 100%;
+  position: relative; }
 
 .mission_left {
   position: relative;
-  width: 60%; }
-  .mission_left .mission_left__image {
-    position: absolute;
-    top: 0%;
-    left: -15%;
-    transform: rotate3d(0, 0, 1, 90deg); }
+  width: 50%;
+  height: 100vh; }
 
 .mission_right {
-  margin: auto 0;
   position: relative;
-  width: 40%;
+  width: 50%;
+  height: 100%; }
+
+.mission__blur_l {
+  position: absolute;
+  width: 1000px;
+  height: 500px;
+  background: #ffffff;
+  opacity: 0.2;
+  filter: blur(118.009px);
+  z-index: 0; }
+
+.mission__blur_r {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 85px;
+  height: 85px;
+  background: #f101bf;
+  opacity: 0.7;
+  filter: blur(50px); }
+
+.mission_left__image {
+  z-index: 10; }
+
+.mission_left__content {
   display: flex;
+  position: absolute;
+  top: 25%;
+  left: -40%;
+  transition: transform 2s ease-in-out;
+  z-index: 10; }
+
+.mission_left__content_anim {
+  transform: scale(0.8, 0.8) translateX(80%) translateY(-8%) rotateZ(-90deg); }
+
+.mission_right__title {
+  width: 85%;
+  z-index: 10; }
+
+.mission_right__info {
+  width: 85%; }
+
+.mission_right__content {
+  display: flex;
+  width: 50%;
   flex-direction: column;
-  row-gap: 23px; }
-  .mission_right .mission_right__blur {
-    position: absolute;
-    top: 0;
-    right: 50%;
-    width: 85px;
-    height: 85px;
-    background: #f101bf;
-    opacity: 0.7;
-    filter: blur(50px); }
-  .mission_right .mission_right__title {
-    width: 85%;
-    z-index: 10; }
-  .mission_right .mission_right__info {
-    width: 85%; }
+  position: absolute;
+  top: 26%;
+  left: 0%;
+  transition-property: transform, opacity;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out; }
+
+.mission_right__content_anim {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0); }
 
 .background {
   position: absolute;

@@ -336,50 +336,86 @@ body {
 // content
 .mission {
   display: flex;
-  gap: 10%;
+  width: 100%;
   height: 100%;
+  // background-color: #c91b1b;
+  position: relative;
 }
-
 .mission_left {
   position: relative;
-  width: 60%;
-
-  .mission_left__image {
-    position: absolute;
-    top: 0%;
-    left: -15%;
-    transform: rotate3d(0, 0, 1, 90deg);
-  }
+  width: 50%;
+  height: 100vh;
+  // background-color: #4a5e81;
 }
-
 .mission_right {
-  margin: auto 0;
   position: relative;
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  row-gap: 23px;
-
-  .mission_right__blur {
-    position: absolute;
-    top: 0;
-    right: 50%;
-    width: 85px;
-    height: 85px;
-    background: #f101bf;
-    opacity: 0.7;
-    filter: blur(50px);
-  }
-  .mission_right__title {
-    width: 85%;
-    @extend %font_regular51;
-    z-index: 10;
-  }
-  .mission_right__info {
-    width: 85%;
-    @extend %font_regular18;
-  }
+  width: 50%;
+  height: 100%;
+  // background-color: #81794a;
 }
+.mission__blur_l {
+  position: absolute;
+  width: 1000px;
+  height: 500px;
+  background: #ffffff;
+  opacity: 0.2;
+  filter: blur(118.009px);
+  z-index: 0;
+}
+.mission__blur_r {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 85px;
+  height: 85px;
+  background: #f101bf;
+  opacity: 0.7;
+  filter: blur(50px);
+}
+
+.mission_left__image {
+  z-index: 10;
+}
+.mission_left__content {
+  display: flex;
+  position: absolute;
+  top: 25%;
+  left: -40%;
+  transition: transform 2s ease-in-out;
+  z-index: 10;
+}
+.mission_left__content_anim {
+  transform: scale(0.8, 0.8) translateX(80%) translateY(-8%) rotateZ(-90deg);
+}
+.mission_right__title {
+  width: 85%;
+  @extend %font_regular51;
+  z-index: 10;
+}
+.mission_right__info {
+  width: 85%;
+  @extend %font_regular18;
+}
+.mission_right__content {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  position: absolute;
+  top: 26%;
+  left: 0%;
+  transition-property:  transform, opacity;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  // background-color: #727272;
+  
+}
+.mission_right__content_anim {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}
+
+
+
 // ======================= 4 страница =======================
 .background {
   position: absolute;
@@ -968,14 +1004,14 @@ body {
   background: #212834;
   z-index: 1000;
   align-items: center;
-  pointer-events:fill;
+  pointer-events: fill;
   transition-property: opacity, transform;
-  transition-timing-function:ease-in;
+  transition-timing-function: ease-in;
   transition-duration: 1s;
-  &.vis{
+  &.vis {
     pointer-events: none;
-    opacity:0.5; 
-    transform:translateY(100%);
+    opacity: 0.5;
+    transform: translateY(100%);
   }
 }
 .cookie__text {
@@ -990,4 +1026,3 @@ body {
   cursor: pointer;
   @extend %font_regular14;
 }
-
