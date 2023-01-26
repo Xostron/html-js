@@ -1,33 +1,8 @@
-.svg {
-  color: #c00606; }
+.svg_transition, .text_transition, .button__icon, .button__text, .link__card {
+  transition-duration: .5s;
+  transition-timing-function: ease-out; }
 
-text {
-  color: white; }
-
-.text_underline {
-  border-bottom: 1px solid white; }
-
-.button {
-  background-color: transparent;
-  outline: none;
-  cursor: pointer; }
-
-.button__icon_text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px; }
-  .button__icon_text:hover .svg {
-    fill: #fa00ff; }
-  .button__icon_text:hover .text {
-    color: #fa00ff;
-    border-color: #fa00ff; }
-
-.button__header {
-  border: none;
-  height: fit-content; }
-
-.cookie__text, .btn_gray {
+.cookie__text {
   font-size: 14px;
   font-family: Noto sans;
   color: white;
@@ -67,7 +42,7 @@ text {
   font-weight: 700;
   font-size: 30px; }
 
-.card .card_link, .card .card_btn {
+.button__card, .link__card {
   font-family: "Noto Sans";
   font-style: normal;
   font-weight: 400;
@@ -110,12 +85,106 @@ body {
   justify-content: space-between;
   position: relative; }
 
-.i_btn {
+.svg {
+  fill: white; }
+
+.svg_transition {
+  transition-property: fill; }
+
+.text {
+  color: white; }
+
+.text_transition {
+  transition-property: border-color, color; }
+
+.text_underline {
+  border-bottom: 1px solid white; }
+
+.button {
+  background-color: transparent;
+  outline: none;
+  cursor: pointer; }
+
+.button__icon_text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px; }
+
+.button__icon {
   border: 1.5px solid white;
   border-radius: 8px;
-  background-color: transparent;
-  padding: 0 6px;
-  height: 51.3px; }
+  background-color: transparent; }
+
+.button__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none; }
+
+.button__header {
+  border: none;
+  height: fit-content; }
+  .button__header:hover .svg {
+    fill: #fa00ff; }
+  .button__header:hover .text {
+    color: #fa00ff;
+    border-color: #fa00ff; }
+
+.button__icon_hover {
+  transition-property: border-color; }
+  .button__icon_hover:hover {
+    border-color: #fa00ff; }
+
+.button__footer {
+  height: 51.3px;
+  padding: 0 11px; }
+
+.button__dwnl_app {
+  height: 81.27px;
+  padding: 0 20px; }
+
+.button__card {
+  width: fit-content;
+  text-decoration: underline;
+  transition-property: color; }
+  .button__card:hover {
+    color: #fa00ff; }
+
+.button__cookie {
+  width: 132px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.5px solid #ffffff;
+  border-radius: 6px;
+  font-size: 14px;
+  transition-property: color, border-color; }
+  .button__cookie:hover {
+    color: #fa00ff;
+    border-color: #fa00ff; }
+
+.button__form {
+  width: 398px;
+  height: 80px;
+  border: 0.5px solid #ffffff;
+  border-radius: 10px;
+  font-size: 24px;
+  font-family: Montserrat;
+  transition-property: color, border-color; }
+  .button__form:hover {
+    color: #fa00ff;
+    border-color: #fa00ff; }
+
+.link {
+  display: flex;
+  align-items: flex-start;
+  width: fit-content;
+  color: white; }
+
+.link__card {
+  transition-property: color; }
+  .link__card:hover {
+    color: #fa00ff; }
 
 .logo {
   display: flex;
@@ -271,20 +340,6 @@ body {
     width: 70%;
     display: flex;
     align-items: flex-start; }
-  .card .card_link {
-    width: fit-content;
-    display: flex;
-    align-items: flex-start;
-    color: white; }
-  .card .card_btn {
-    width: fit-content;
-    display: flex;
-    align-items: flex-start;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    color: white;
-    text-decoration: underline; }
 
 .mission {
   display: flex;
@@ -729,12 +784,6 @@ body {
   flex-direction: column;
   row-gap: 23px; }
 
-.user_form__buttons {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center; }
-
 .user_form__area,
 .user_form__input {
   outline: none;
@@ -836,13 +885,5 @@ body {
     pointer-events: none;
     opacity: 0.5;
     transform: translateY(100%); }
-
-.btn_gray {
-  width: 132px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 0.5px solid #ffffff;
-  border-radius: 6px;
-  cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */

@@ -49,11 +49,11 @@ const observer = new IntersectionObserver(
 const mission = document.querySelector(".mission");
 observer.observe(mission);
 // *************анимация cookie
-// const cookie = document.querySelector(".cookie");
-// setTimeout(() => {
-//   cookie.classList.remove("vis");
-// }, 500);
-// function hiddenCookie() {
-//   console.log("hide");
-//   cookie.classList.add("vis");
-// }
+const cookie = document.querySelector(".cookie");
+setTimeout(() => {
+  cookie.classList.remove("vis");
+}, 500);
+function hiddenCookie() {
+  console.log("hide");
+  cookie.classList.add("vis");
+}

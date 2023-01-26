@@ -23,7 +23,7 @@
             </div>
             <button class="button button__header button__icon_text">
               <svg
-                class="svg"
+                class="svg svg_transition"
                 width="26"
                 height="25"
                 viewBox="0 0 26 25"
@@ -36,7 +36,7 @@
                   d="M13.0016 3.33203C10.608 3.33203 8.66772 5.19675 8.66772 7.4971C8.66772 9.79744 10.608 11.6622 13.0016 11.6622C15.3952 11.6622 17.3356 9.79744 17.3356 7.4971C17.333 5.19777 15.3942 3.33447 13.0016 3.33203ZM13.0016 10.8291C11.0867 10.8291 9.53451 9.33741 9.53451 7.4971C9.53451 5.65678 11.0867 4.16504 13.0016 4.16504C14.9166 4.16504 16.4688 5.65678 16.4688 7.4971C16.4667 9.3364 14.9155 10.8271 13.0016 10.8291Z"
                 />
               </svg>
-              <text class="text text_underline">Login</text>
+              <text class="text text_underline text_transition">Login</text>
             </button>
           </div>
         </header>
@@ -85,9 +85,8 @@
         <footer class="footer">
           <div class="footer__text">DOWNLOAD OUR APP</div>
           <div class="footer__btn">
-            <button class="i_btn">
+            <button class="button button__footer button__icon_hover button__icon">
               <svg
-                class="svg"
                 width="137"
                 height="33"
                 viewBox="0 0 137 33"
@@ -187,7 +186,7 @@
                 />
               </svg>
             </button>
-            <button class="i_btn">
+            <button class="button button__footer button__icon_hover button__icon">
               <svg
                 width="159"
                 height="36"
@@ -351,7 +350,7 @@
           <div class="card">
             <span class="card_info">
               Would like to become a member, please contact us
-              <a class="card_link" href="support@notab.com">
+              <a class="link link__card" href="http://support@notab.com" target="_blank">
                 support@notab.com
               </a>
             </span>
@@ -359,7 +358,7 @@
           <div class="card">
             <span class="card_info">
               Already a partner?
-              <button class="card_btn">Login</button>
+              <button class="button button__text button__card">Login</button>
             </span>
           </div>
         </header>
@@ -522,9 +521,8 @@
               is generated
             </span>
             <div class="block__btn">
-              <button class="i_btn">
+              <button class="button button__footer button__icon button__icon_hover">
                 <svg
-                  class="i_btn__svg"
                   width="137"
                   height="33"
                   viewBox="0 0 137 33"
@@ -624,7 +622,7 @@
                   />
                 </svg>
               </button>
-              <button class="i_btn">
+              <button class="button button__footer button__icon button__icon_hover">
                 <svg
                   width="159"
                   height="36"
@@ -950,17 +948,17 @@
             ></textarea>
           </div>
           <div class="user_form__buttons">
-            <input class="user_form__button" type="submit" value="Save" />
+            <input class="button button__text button__form" type="submit" value="Send" />
           </div>
         </form>
         <div class="dwnl_app">
           DOWNLOAD OUR APP
           <div class="dwnl_app__btns">
-            <button class="i_btn">
+            <button class="button button__dwnl_app button__icon button__icon_hover">
               <svg
                 class="i_btn__svg"
-                width="137"
-                height="33"
+                width="215.3"
+                height="50.89"
                 viewBox="0 0 137 33"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -1058,10 +1056,10 @@
                 />
               </svg>
             </button>
-            <button class="i_btn">
+            <button class="button button__dwnl_app button__icon button__icon_hover">
               <svg
-                width="159"
-                height="36"
+                width="250.69"
+                height="55.28"
                 viewBox="0 0 159 36"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -1236,7 +1234,7 @@
           We use cookie to improve your experience on our site. By using our
           site you consent cookies.
         </span>
-        <button class="btn_gray" onclick="hiddenCookie()">OK</button>
+        <button class="button button__text button__cookie" onclick="hiddenCookie()">OK</button>
       </div>
     </div>
     <script src="./landing/script/index.js"></script>
