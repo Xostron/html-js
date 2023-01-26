@@ -1,39 +1,80 @@
 $bgcolor: #000;
-$base_color: rgb(255, 255, 255);
-%btn {
+$font_color: rgb(255, 255, 255);
+$color_hover: rgb(250, 0, 255);
+
+.svg {
+  color: rgb(192, 6, 6);
+}
+text{
+  color: $font_color;
+}
+.text_underline {
+  border-bottom: 1px solid white;
+}
+
+// Кнопки
+.button {
+  @extend %font_regular18;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.button__icon_text {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  gap: 14px;
+  &:hover {
+    .svg{
+      fill: $color_hover;
+    }
+    .text{
+      color: $color_hover;
+      border-color: $color_hover;
+    }
+  }
 }
+
+.button__icon {
+}
+.button__text {
+}
+
+.button__header {
+  border: none;
+  height: fit-content;
+}
+
+
 %font_regular14 {
   font-size: 14px;
   font-family: Noto sans;
-  color: $base_color;
+  color: $font_color;
   weight: 400;
 }
 %font_regular18 {
   font-size: 18px;
   font-family: Noto sans;
-  color: $base_color;
+  color: $font_color;
   weight: 500;
 }
 %font_regular20 {
   font-size: 20px;
   font-family: Noto sans;
-  color: $base_color;
+  color: $font_color;
   weight: 500;
 }
 %font_title64 {
   font-size: 64px;
   font-family: Montserrat;
-  color: $base_color;
+  color: $font_color;
   weight: 700;
 }
 %font_title35 {
   font-size: 35px;
   font-family: Montserrat;
-  color: $base_color;
+  color: $font_color;
   weight: 700;
 }
 %font_regular30 {
@@ -53,7 +94,7 @@ $base_color: rgb(255, 255, 255);
   font-style: normal;
   font-weight: 700;
   font-size: 51px;
-  color: $base_color;
+  color: $font_color;
 }
 html,
 body {
@@ -87,28 +128,11 @@ body {
   position: relative;
 }
 // кнопка svg+text
-.i_btn_text {
-  @extend %btn;
-  @extend %font_regular18;
-  gap: 14px;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  height: fit-content;
-  cursor: pointer;
 
-  .i_btn_text__svg {
-    fill: white;
-  }
-  .i_btn_text__text {
-    color: white;
-    border-bottom: 1px solid white;
-  }
-}
 // кнопка svg+border
 .i_btn {
-  @extend %btn;
-  border: 1.5px solid $base_color;
+  // @extend %btn;
+  border: 1.5px solid $font_color;
   border-radius: 8px;
   background-color: transparent;
   padding: 0 6px;
@@ -338,31 +362,55 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  // background-color: #c91b1b;
   position: relative;
 }
 .mission_left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   position: relative;
   width: 50%;
   height: 100vh;
-  // background-color: #4a5e81;
 }
 .mission_right {
   position: relative;
   width: 50%;
   height: 100%;
-  // background-color: #81794a;
+  transition-property: transform, opacity;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
 }
-.mission__blur_l {
+.mission_left__blur {
   position: absolute;
-  width: 1000px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
   background: #ffffff;
   opacity: 0.2;
   filter: blur(118.009px);
-  z-index: 0;
+  z-index: 1;
 }
-.mission__blur_r {
+
+.mission_left__image {
+  width: 100%;
+  height: 100%;
+  min-width: 500px;
+  position: absolute;
+  z-index: 10;
+  object-fit: contain;
+  transform: translateX(0%) translateY(0%) rotateZ(0deg);
+}
+.mission_left__content {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  transform: translateX(-20%) translateY(0%) rotateZ(0deg);
+  transition: transform 2s ease-in-out;
+  z-index: 10;
+}
+.mission_left__content_anim {
+  transform: translateX(50%) translateY(0%) rotateZ(-90deg) scale(0.9, 0.9);
+}
+.mission__right_blur {
   position: absolute;
   top: 0;
   right: 50%;
@@ -372,28 +420,15 @@ body {
   opacity: 0.7;
   filter: blur(50px);
 }
-
-.mission_left__image {
-  z-index: 10;
-}
-.mission_left__content {
-  display: flex;
-  position: absolute;
-  top: 25%;
-  left: -40%;
-  transition: transform 2s ease-in-out;
-  z-index: 10;
-}
-.mission_left__content_anim {
-  transform: scale(0.8, 0.8) translateX(80%) translateY(-8%) rotateZ(-90deg);
-}
 .mission_right__title {
   width: 85%;
+  max-width: 358px;
   @extend %font_regular51;
   z-index: 10;
 }
 .mission_right__info {
   width: 85%;
+  max-width: 315px;
   @extend %font_regular18;
 }
 .mission_right__content {
@@ -401,20 +436,13 @@ body {
   width: 50%;
   flex-direction: column;
   position: absolute;
-  top: 26%;
+  top: 30%;
   left: 0%;
-  transition-property:  transform, opacity;
-  transition-duration: 2s;
-  transition-timing-function: ease-in-out;
-  // background-color: #727272;
-  
 }
-.mission_right__content_anim {
+.mission_right__anim {
   opacity: 0;
   transform: translate3d(100%, 0, 0);
 }
-
-
 
 // ======================= 4 страница =======================
 .background {

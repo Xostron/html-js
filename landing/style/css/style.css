@@ -1,8 +1,31 @@
-.i_btn_text, .i_btn {
+.svg {
+  color: #c00606; }
+
+text {
+  color: white; }
+
+.text_underline {
+  border-bottom: 1px solid white; }
+
+.button {
+  background-color: transparent;
+  outline: none;
+  cursor: pointer; }
+
+.button__icon_text {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer; }
+  gap: 14px; }
+  .button__icon_text:hover .svg {
+    fill: #fa00ff; }
+  .button__icon_text:hover .text {
+    color: #fa00ff;
+    border-color: #fa00ff; }
+
+.button__header {
+  border: none;
+  height: fit-content; }
 
 .cookie__text, .btn_gray {
   font-size: 14px;
@@ -10,7 +33,7 @@
   color: white;
   weight: 400; }
 
-.i_btn_text, .footer_font18, .mission_right__info, .id_scanner .id_scanner__info .id_scanner__text, .tool .tool__text, .qr .qr__info .qr__text, .background3 .background3__text_arrow, .background3 .background3__text, .ordering__info .ordering__text, .form_header .form_header__text, .user_form__area,
+.button, .footer_font18, .mission_right__info, .id_scanner .id_scanner__info .id_scanner__text, .tool .tool__text, .qr .qr__info .qr__text, .background3 .background3__text_arrow, .background3 .background3__text, .ordering__info .ordering__text, .form_header .form_header__text, .user_form__area,
 .user_form__input, .user_form__button {
   font-size: 18px;
   font-family: Noto sans;
@@ -86,19 +109,6 @@ body {
   align-items: center;
   justify-content: space-between;
   position: relative; }
-
-.i_btn_text {
-  gap: 14px;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  height: fit-content;
-  cursor: pointer; }
-  .i_btn_text .i_btn_text__svg {
-    fill: white; }
-  .i_btn_text .i_btn_text__text {
-    color: white;
-    border-bottom: 1px solid white; }
 
 .i_btn {
   border: 1.5px solid white;
@@ -283,6 +293,9 @@ body {
   position: relative; }
 
 .mission_left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   position: relative;
   width: 50%;
   height: 100vh; }
@@ -290,18 +303,41 @@ body {
 .mission_right {
   position: relative;
   width: 50%;
-  height: 100%; }
+  height: 100%;
+  transition-property: transform, opacity;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out; }
 
-.mission__blur_l {
+.mission_left__blur {
   position: absolute;
-  width: 1000px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
   background: #ffffff;
   opacity: 0.2;
   filter: blur(118.009px);
-  z-index: 0; }
+  z-index: 1; }
 
-.mission__blur_r {
+.mission_left__image {
+  width: 100%;
+  height: 100%;
+  min-width: 500px;
+  position: absolute;
+  z-index: 10;
+  object-fit: contain;
+  transform: translateX(0%) translateY(0%) rotateZ(0deg); }
+
+.mission_left__content {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  transform: translateX(-20%) translateY(0%) rotateZ(0deg);
+  transition: transform 2s ease-in-out;
+  z-index: 10; }
+
+.mission_left__content_anim {
+  transform: translateX(50%) translateY(0%) rotateZ(-90deg) scale(0.9, 0.9); }
+
+.mission__right_blur {
   position: absolute;
   top: 0;
   right: 50%;
@@ -311,39 +347,24 @@ body {
   opacity: 0.7;
   filter: blur(50px); }
 
-.mission_left__image {
-  z-index: 10; }
-
-.mission_left__content {
-  display: flex;
-  position: absolute;
-  top: 25%;
-  left: -40%;
-  transition: transform 2s ease-in-out;
-  z-index: 10; }
-
-.mission_left__content_anim {
-  transform: scale(0.8, 0.8) translateX(80%) translateY(-8%) rotateZ(-90deg); }
-
 .mission_right__title {
   width: 85%;
+  max-width: 358px;
   z-index: 10; }
 
 .mission_right__info {
-  width: 85%; }
+  width: 85%;
+  max-width: 315px; }
 
 .mission_right__content {
   display: flex;
   width: 50%;
   flex-direction: column;
   position: absolute;
-  top: 26%;
-  left: 0%;
-  transition-property: transform, opacity;
-  transition-duration: 2s;
-  transition-timing-function: ease-in-out; }
+  top: 30%;
+  left: 0%; }
 
-.mission_right__content_anim {
+.mission_right__anim {
   opacity: 0;
   transform: translate3d(100%, 0, 0); }
 
