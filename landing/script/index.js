@@ -22,7 +22,6 @@ inputs.forEach((input) => {
 // *************анимация page mission
 const imageContent = document.querySelector(".mission_left__content");
 const missionRight = document.querySelector(".mission_right");
-
 const observer = new IntersectionObserver(
   ([entry]) => {
     console.log("TOTAL ========\n", entry.isIntersecting,
@@ -48,8 +47,9 @@ const observer = new IntersectionObserver(
 );
 const mission = document.querySelector(".flex__mission_left");
 observer.observe(mission);
+
 // *************анимация cookie
-const cookie = document.querySelector(".cookie");
+const cookie = document.querySelector(".flex_cookie");
 setTimeout(() => {
   cookie.classList.remove("vis");
 }, 500);

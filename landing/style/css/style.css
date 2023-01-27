@@ -6,13 +6,17 @@
   transition-duration: 2s;
   transition-timing-function: ease-in-out; }
 
+.flex_cookie {
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s; }
+
 .cookie__text {
   font-size: 14px;
   font-family: Noto sans;
   color: white;
   weight: 400; }
 
-.text__font18, .text__font18_noto, .button, .text__arrow, .form_header .form_header__text, .user_form__area,
+.text__font18, .text__font18_noto, .button, .text__arrow, .user_form__area,
 .user_form__input, .user_form__button {
   font-size: 18px;
   font-family: Noto sans;
@@ -37,7 +41,7 @@
   color: white;
   weight: 700; }
 
-.flex__card, .dwnl_app {
+.flex__card, .flex__dwnl_app {
   font-family: "Noto Sans";
   font-style: normal;
   font-weight: 700;
@@ -49,7 +53,7 @@
   font-weight: 400;
   font-size: 24px; }
 
-.text__font51, .form_header .form_header__title {
+.text__font51 {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -80,8 +84,8 @@ body {
   height: 120vh;
   background-color: #5c5c5c; }
 
-.page_150 {
-  height: 170vh; }
+.page_180 {
+  height: 180vh; }
 
 .page_250 {
   height: 250vh; }
@@ -247,7 +251,7 @@ body {
 
 .flex__footer_form {
   align-items: flex-start;
-  padding-bottom: 16px; }
+  padding-bottom: 85.85px; }
 
 .flex__btns {
   width: 50%;
@@ -342,14 +346,39 @@ body {
   filter: blur(155.784px); }
 
 .blur__easier {
-  top: 100%;
-  right: -10%;
+  top: 80%;
+  right: -20%;
   width: 286.92px;
   height: 267.17px;
   background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
-  opacity: 0.9;
+  opacity: 0.3;
   filter: blur(125px);
   transform: rotate(5.78deg); }
+
+.blur_form {
+  background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
+  opacity: 0.3;
+  filter: blur(125px);
+  transform: rotate(5.78deg); }
+
+.blur1 {
+  top: 0%;
+  left: 30%;
+  width: 250px;
+  height: 250px; }
+
+.blur2 {
+  top: 45%;
+  right: 0%;
+  width: 340px;
+  height: 340px; }
+
+.blur3 {
+  position: absolute;
+  bottom: -13%;
+  left: -8%;
+  width: 400px;
+  height: 400px; }
 
 .bg_page_abs {
   position: absolute;
@@ -672,30 +701,26 @@ body {
   z-index: 100;
   margin: auto; }
 
-.form_header {
-  display: flex;
+.flex__form_header {
   width: 100%;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 10; }
-  .form_header .form_header__text {
-    text-align: center; }
+  z-index: 10;
+  row-gap: 23px; }
 
-.user_form {
+.text_center {
+  text-align: center; }
+
+.flex__user_form {
   padding-top: 82px;
   padding-bottom: 91px;
-  display: flex;
   width: 100%;
-  flex-direction: column;
   row-gap: 60px;
   align-items: center;
   z-index: 10; }
 
-.user_form__inputs {
-  display: flex;
+.flex__user_form_inputs {
   width: 70%;
-  flex-direction: column;
   row-gap: 23px; }
 
 .user_form__area,
@@ -730,9 +755,7 @@ body {
   display: flex;
   gap: 24px; }
 
-.dwnl_app {
-  display: flex;
-  flex-direction: column;
+.flex__dwnl_app {
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -740,50 +763,13 @@ body {
   padding-bottom: 150px;
   z-index: 10; }
 
-.dwnl_app__btns {
-  display: flex;
-  width: fit-content;
-  gap: 59px; }
+.flex__btns_app {
+  justify-content: center;
+  width: 100%;
+  gap: 7%; }
 
-.blur1 {
-  position: absolute;
-  top: 0%;
-  left: 30%;
-  width: 250px;
-  height: 250px;
-  background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
-  opacity: 0.3;
-  filter: blur(125px);
-  transform: rotate(5.78deg);
-  z-index: 1; }
-
-.blur2 {
-  position: absolute;
-  top: 45%;
-  right: 0%;
-  width: 340px;
-  height: 340px;
-  background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
-  opacity: 0.3;
-  filter: blur(125px);
-  transform: rotate(5.78deg);
-  z-index: 1; }
-
-.blur3 {
-  position: absolute;
-  bottom: -13%;
-  left: -8%;
-  width: 400px;
-  height: 400px;
-  background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
-  opacity: 0.3;
-  filter: blur(125px);
-  transform: rotate(5.78deg);
-  z-index: 1; }
-
-.cookie {
+.flex_cookie {
   position: fixed;
-  display: flex;
   width: 100%;
   height: 93px;
   bottom: 0%;
@@ -792,10 +778,8 @@ body {
   z-index: 1000;
   align-items: center;
   pointer-events: fill;
-  transition-property: opacity, transform;
-  transition-timing-function: ease-in;
-  transition-duration: 1s; }
-  .cookie.vis {
+  transition-property: opacity, transform; }
+  .flex_cookie.vis {
     pointer-events: none;
     opacity: 0.5;
     transform: translateY(100%); }

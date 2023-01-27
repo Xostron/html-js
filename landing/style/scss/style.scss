@@ -10,6 +10,10 @@ $color_hover: rgb(250, 0, 255);
   transition-duration: 2s;
   transition-timing-function: ease-in-out;
 }
+%transition_cookie{
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+}
 %font_regular14 {
   font-size: 14px;
   font-family: Noto sans;
@@ -85,8 +89,8 @@ body {
   height: 120vh;
   background-color: #5c5c5c;
 }
-.page_150 {
-  height: 170vh;
+.page_180 {
+  height: 180vh;
 }
 .page_250 {
   height: 250vh;
@@ -300,7 +304,7 @@ body {
 }
 .flex__footer_form {
   align-items: flex-start;
-  padding-bottom: 16px;
+  padding-bottom: 85.85px;
 }
 .flex__btns {
   width: 50%;
@@ -398,14 +402,39 @@ body {
   filter: blur(155.784px);
 }
 .blur__easier {
-  top: 100%;
-  right: -10%;
+  top: 80%;
+  right: -20%;
   width: 286.92px;
   height: 267.17px;
   background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
-  opacity: 0.9;
+  opacity: 0.3;
   filter: blur(125px);
   transform: rotate(5.78deg);
+}
+.blur_form{
+  background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
+  opacity: 0.3;
+  filter: blur(125px);
+  transform: rotate(5.78deg);
+}
+.blur1 {
+  top: 0%;
+  left: 30%;
+  width: 250px;
+  height: 250px;
+}
+.blur2 {
+  top: 45%;
+  right: 0%;
+  width: 340px;
+  height: 340px;
+}
+.blur3 {
+  position: absolute;
+  bottom: -13%;
+  left: -8%;
+  width: 400px;
+  height: 400px;
 }
 // background
 .bg_page_abs {
@@ -773,43 +802,29 @@ body {
   margin: auto;
 }
 // ======================= 9 страница =======================
-.form_header {
-  display: flex;
+.flex__form_header {
   width: 100%;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 10;
-  .form_header__title {
-    @extend %font_regular51;
-  }
-  .form_header__text {
-    @extend %font_regular18;
-    text-align: center;
-  }
+  row-gap: 23px;
 }
-
-.user_form {
+.text_center {
+  text-align: center;
+}
+// форма анкеты
+.flex__user_form {
   padding-top: 82px;
   padding-bottom: 91px;
-  display: flex;
   width: 100%;
-  flex-direction: column;
-  // background-color: #8b8b8b;
   row-gap: 60px;
   align-items: center;
   z-index: 10;
 }
-.user_form__inputs {
-  display: flex;
+.flex__user_form_inputs {
   width: 70%;
-  flex-direction: column;
   row-gap: 23px;
-  // align-items: center;
-  // justify-content: center;
-  // background-color: #0066ff;
 }
-
 .user_form__area,
 .user_form__input {
   outline: none;
@@ -830,7 +845,6 @@ body {
 .error {
   border: 2px solid #ff0000;
 }
-
 .user_form__button {
   outline: none;
   padding: 25px 167px;
@@ -840,16 +854,12 @@ body {
   cursor: pointer;
   @extend %font_regular18;
 }
-
 .user_form_row_inputs {
   width: 100%;
   display: flex;
   gap: 24px;
-  // background-color: #f101bf;
 }
-.dwnl_app {
-  display: flex;
-  flex-direction: column;
+.flex__dwnl_app {
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -858,52 +868,15 @@ body {
   @extend %font_regular30;
   z-index: 10;
 }
-.dwnl_app__btns {
-  display: flex;
-  width: fit-content;
-  gap: 59px;
-}
-.blur1 {
-  position: absolute;
-  top: 0%;
-  left: 30%;
-  width: 250px;
-  height: 250px;
-  background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
-  opacity: 0.3;
-  filter: blur(125px);
-  transform: rotate(5.78deg);
-  z-index: 1;
-}
-.blur2 {
-  position: absolute;
-  top: 45%;
-  right: 0%;
-  width: 340px;
-  height: 340px;
-  background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
-  opacity: 0.3;
-  filter: blur(125px);
-  transform: rotate(5.78deg);
-  z-index: 1;
-}
-.blur3 {
-  position: absolute;
-  bottom: -13%;
-  left: -8%;
-  width: 400px;
-  height: 400px;
-  background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
-  opacity: 0.3;
-  filter: blur(125px);
-  transform: rotate(5.78deg);
-  z-index: 1;
+.flex__btns_app {
+  justify-content: center;
+  width: 100%;
+  gap: 7%;
 }
 
 // ======================= cookie =======================
-.cookie {
+.flex_cookie {
   position: fixed;
-  display: flex;
   width: 100%;
   height: 93px;
   bottom: 0%;
@@ -913,8 +886,7 @@ body {
   align-items: center;
   pointer-events: fill;
   transition-property: opacity, transform;
-  transition-timing-function: ease-in;
-  transition-duration: 1s;
+  @extend %transition_cookie;
   &.vis {
     pointer-events: none;
     opacity: 0.5;
