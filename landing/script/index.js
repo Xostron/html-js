@@ -21,7 +21,7 @@ inputs.forEach((input) => {
 
 // *************анимация page mission
 const imageContent = document.querySelector(".mission_left__content");
-const missionText = document.querySelector(".mission_right");
+const missionRight = document.querySelector(".mission_right");
 
 const observer = new IntersectionObserver(
   ([entry]) => {
@@ -34,11 +34,11 @@ const observer = new IntersectionObserver(
     ) {
       console.log("add style");
       imageContent.classList.add("mission_left__content_anim");
-      missionText.classList.add("mission_right__anim");
+      missionRight.classList.add("mission_right__anim");
     } else if (entry.intersectionRatio < 0.5){
       console.log("remove style");
       imageContent.classList.remove("mission_left__content_anim");
-      missionText.classList.remove("mission_right__anim");
+      missionRight.classList.remove("mission_right__anim");
     }
   },
   {
@@ -46,7 +46,7 @@ const observer = new IntersectionObserver(
     threshold: [.5, .75],
   }
 );
-const mission = document.querySelector(".mission");
+const mission = document.querySelector(".flex__mission_left");
 observer.observe(mission);
 // *************анимация cookie
 const cookie = document.querySelector(".cookie");
