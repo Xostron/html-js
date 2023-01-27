@@ -2,11 +2,11 @@ $bgcolor: #000;
 $color_font: rgb(255, 255, 255);
 $color_hover: rgb(250, 0, 255);
 
-%transition_hover{
-  transition-duration: .5s;
+%transition_hover {
+  transition-duration: 0.5s;
   transition-timing-function: ease-out;
 }
-%transition_mission{
+%transition_mission {
   transition-duration: 2s;
   transition-timing-function: ease-in-out;
 }
@@ -72,7 +72,7 @@ body {
   box-sizing: border-box;
 }
 // landing контейнер
-.page{
+.page {
   width: 100%;
   background-color: $bgcolor;
   overflow: hidden;
@@ -114,17 +114,16 @@ body {
   justify-content: space-between;
   position: relative;
 }
-@media screen and (max-width:1000px) {
+@media screen and (max-width: 1000px) {
   .container {
     max-width: 95%;
   }
-
 }
 // svg, text
 .svg {
   fill: $color_font;
 }
-.svg_transition{
+.svg_transition {
   transition-property: fill;
   @extend %transition_hover;
 }
@@ -134,10 +133,10 @@ body {
   left: 63%;
   transform: translate3d(-50%, -80%, 0);
 }
-.text{
+.text {
   color: $color_font;
 }
-.text_transition{
+.text_transition {
   transition-property: border-color, color;
   @extend %transition_hover;
 }
@@ -193,38 +192,38 @@ body {
   border: none;
   height: fit-content;
   &:hover {
-    .svg{
+    .svg {
       fill: $color_hover;
     }
-    .text{
+    .text {
       color: $color_hover;
       border-color: $color_hover;
     }
   }
 }
 
-.button__icon_hover{
+.button__icon_hover {
   transition-property: border-color;
-  &:hover{
+  &:hover {
     border-color: $color_hover;
   }
 }
 
-.button__footer{
+.button__footer {
   height: 51.3px;
   padding: 0 11px;
 }
-.button__dwnl_app{
+.button__dwnl_app {
   height: 81.27px;
   padding: 0 20px;
 }
 
-.button__card{
+.button__card {
   @extend %font_regular24;
   width: fit-content;
   text-decoration: underline;
-  transition-property:color ;
-  &:hover{
+  transition-property: color;
+  &:hover {
     color: $color_hover;
   }
 }
@@ -237,7 +236,7 @@ body {
   border-radius: 6px;
   font-size: 14px;
   transition-property: color, border-color;
-  &:hover{
+  &:hover {
     color: $color_hover;
     border-color: $color_hover;
   }
@@ -251,35 +250,35 @@ body {
   font-size: 24px;
   font-family: Montserrat;
   transition-property: color, border-color;
-  &:hover{
+  &:hover {
     color: $color_hover;
     border-color: $color_hover;
   }
 }
 // ***********************************
 // CSS Link
-.link{
+.link {
   display: flex;
   align-items: flex-start;
   width: fit-content;
   color: $color_font;
 }
-.link__card{
+.link__card {
   @extend %font_regular24;
   @extend %transition_hover;
   transition-property: color;
-  &:hover{
+  &:hover {
     color: $color_hover;
   }
 }
 
 // flex строка
-.flex_row{
+.flex_row {
   display: flex;
   position: relative;
 }
 // 1 page: Заголовок header
-.flex_row__header{
+.flex_row__header {
   width: 100%;
   gap: 108px;
   align-items: center;
@@ -290,16 +289,16 @@ body {
   align-items: center;
 }
 // Footer
-.flex__footer{
+.flex__footer {
   margin-top: auto;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
-.flex__footer_intro{
+.flex__footer_intro {
   @extend %font_title35;
   padding: 16px 0;
 }
-.flex__footer_form{
+.flex__footer_form {
   align-items: flex-start;
   padding-bottom: 16px;
 }
@@ -329,7 +328,7 @@ body {
   justify-content: space-between;
 }
 // flex столбец
-.flex_col{
+.flex_col {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -352,12 +351,12 @@ body {
   width: 100%;
   height: 100%;
 }
-.blur__info_image{
+.blur__info_image {
   top: -50%;
   right: 90%;
   width: 150px;
   height: 150px;
-  background: rgba(96, 92, 234, .6);
+  background: rgba(96, 92, 234, 0.6);
   filter: blur(50px);
 }
 .blur__info_phone {
@@ -385,7 +384,7 @@ body {
   background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
   filter: blur(125px);
   transform: rotate(5.78deg);
-  opacity: .3;
+  opacity: 0.3;
 }
 .blur__qr {
   top: 50%;
@@ -409,7 +408,7 @@ body {
   transform: rotate(5.78deg);
 }
 // background
-.bg_page_abs{
+.bg_page_abs {
   position: absolute;
   top: 0;
   left: 0;
@@ -426,6 +425,7 @@ body {
   top: 47%;
   height: 38%;
 }
+
 // bg gradient
 .gradient {
   z-index: 10;
@@ -438,6 +438,15 @@ body {
 }
 .gradient__qr {
   opacity: 0.9;
+}
+.gradient__notab_p8 {
+  // opacity: 0.9;
+  background: linear-gradient(
+    360deg,
+    #000000 6.8%,
+    rgba(0, 0, 0, 0) 51.62%,
+    #000000 97.38%
+  );
 }
 // bg image
 .image__covered {
@@ -471,7 +480,6 @@ body {
 .info__title {
   @extend %font_title64;
   padding-top: 20%;
-
 }
 .info__svg {
   position: relative;
@@ -479,7 +487,7 @@ body {
 .info__text {
   position: relative;
   @extend %font_regular20;
-  max-width:390px;
+  max-width: 390px;
   min-width: 390px;
   padding-top: 30px;
   padding-left: 20px;
@@ -490,9 +498,9 @@ body {
   object-fit: contain;
   z-index: 10;
 }
-// adaptive 1 page - intro - 
-@media screen and (max-width:1000px) {
-  .info__svg{
+// adaptive 1 page - intro -
+@media screen and (max-width: 1000px) {
+  .info__svg {
     display: none;
   }
   .info__text {
@@ -514,9 +522,10 @@ body {
   height: 312px;
   justify-content: center;
   row-gap: 10%;
-  padding:0 10%;
+  padding: 0 10%;
 }
-.card_title{}
+.card_title {
+}
 // ======================= 3 страница =======================
 // content
 .flex__mission {
@@ -562,7 +571,7 @@ body {
   object-fit: contain;
   transform: translateX(0%) translateY(0%) rotateZ(0deg);
 }
-.mission__right_block{
+.mission__right_block {
   width: 85%;
   z-index: 10;
   max-width: 358px;
@@ -746,39 +755,20 @@ body {
   left: 21%;
 }
 // ======================= 8 страница =======================
-.background4 {
+
+.bg__text_notab {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 210px;
+  line-height: 190px;
+  color: transparent;
+  -webkit-text-stroke: 2px #8b8b8b;
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  right: -3%;
   z-index: 0;
-  .background4__notab {
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 210px;
-    line-height: 190px;
-    color: transparent;
-    -webkit-text-stroke: 2px #8b8b8b;
-    position: absolute;
-    right: -3%;
-    z-index: 0;
-  }
-  .background4__gradient {
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    opacity: 0.9;
-    background: linear-gradient(
-      179.83deg,
-      #000000 -3.1%,
-      rgba(0, 0, 0, 0) 56.76%,
-      #000000 83.92%
-    );
-  }
 }
-.notab__img {
+.img__notab {
   z-index: 100;
   margin: auto;
 }
@@ -819,7 +809,6 @@ body {
   // justify-content: center;
   // background-color: #0066ff;
 }
-
 
 .user_form__area,
 .user_form__input {
@@ -935,4 +924,3 @@ body {
 .cookie__text {
   @extend %font_regular14;
 }
-

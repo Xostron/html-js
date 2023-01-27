@@ -1,5 +1,5 @@
 .svg_transition, .text_transition, .button__icon, .button__text, .link__card {
-  transition-duration: .5s;
+  transition-duration: 0.5s;
   transition-timing-function: ease-out; }
 
 .mission_right, .mission_left__content {
@@ -328,7 +328,7 @@ body {
   background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
   filter: blur(125px);
   transform: rotate(5.78deg);
-  opacity: .3; }
+  opacity: 0.3; }
 
 .blur__qr {
   top: 50%;
@@ -374,6 +374,9 @@ body {
 
 .gradient__qr {
   opacity: 0.9; }
+
+.gradient__notab_p8 {
+  background: linear-gradient(360deg, #000000 6.8%, rgba(0, 0, 0, 0) 51.62%, #000000 97.38%); }
 
 .image__covered {
   object-fit: cover; }
@@ -653,32 +656,19 @@ body {
   top: 70%;
   left: 21%; }
 
-.background4 {
+.bg__text_notab {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 210px;
+  line-height: 190px;
+  color: transparent;
+  -webkit-text-stroke: 2px #8b8b8b;
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  right: -3%;
   z-index: 0; }
-  .background4 .background4__notab {
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 210px;
-    line-height: 190px;
-    color: transparent;
-    -webkit-text-stroke: 2px #8b8b8b;
-    position: absolute;
-    right: -3%;
-    z-index: 0; }
-  .background4 .background4__gradient {
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    opacity: 0.9;
-    background: linear-gradient(179.83deg, #000000 -3.1%, rgba(0, 0, 0, 0) 56.76%, #000000 83.92%); }
 
-.notab__img {
+.img__notab {
   z-index: 100;
   margin: auto; }
 
