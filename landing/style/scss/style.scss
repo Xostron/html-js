@@ -333,19 +333,12 @@ h4 {
   align-items: center;
   justify-content: space-between;
 }
-.flex__footer_intro {
-  padding: 16px 0;
-}
+
 .flex__footer_form {
   align-items: flex-start;
   padding-bottom: 85.85px;
 }
-.flex__btns {
-  width: 50%;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
-}
+
 .flex__info {
   gap: 16px;
   align-items: flex-end;
@@ -546,6 +539,11 @@ h4 {
   gap: 8px;
   align-items: center;
 }
+// footer
+.flex__footer_intro {
+  margin-bottom: 16px;;
+}
+// content
 .info_content {
   width: 50%;
   row-gap: 129px;
@@ -582,6 +580,7 @@ h4 {
 }
 // adaptive mobile
 @media screen and (max-width: 500px) {
+  // header
   .flex_row__header {
     // width: 100%;
     margin-top: 40px;
@@ -593,6 +592,21 @@ h4 {
     width: 51.73px;
     height: 52.69px;
   }
+  // footer
+  .flex__footer_intro {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    flex-direction: column;
+    row-gap: 34px;
+  }
+  .flex__btns {
+    flex-direction: column;
+    row-gap: 24px;
+  }
+  // content
 }
 // ======================= 2 страница =======================
 // карточка
