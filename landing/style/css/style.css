@@ -119,29 +119,10 @@ h4 {
   overflow: hidden;
   position: relative; }
 
-.page_100 {
-  height: 100vh; }
-
-.page_120 {
-  height: 120vh;
-  background-color: #5c5c5c; }
-
-.page_180 {
-  height: 180vh; }
-
-.page_250 {
-  height: 250vh; }
-
-.page_40 {
-  height: 40vh; }
-
 .container {
   width: 100%;
-  height: 100%;
   max-width: 88%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
   position: relative; }
 
 .container_row {
@@ -287,11 +268,6 @@ h4 {
   gap: 16px;
   align-items: flex-end; }
 
-.flex__info_phone {
-  width: 50%;
-  align-items: center;
-  justify-content: center; }
-
 .flex__tool {
   width: 100%;
   height: 100%; }
@@ -323,14 +299,6 @@ h4 {
   right: 0;
   width: 100%;
   height: 100%; }
-
-.blur__info_image {
-  top: -50%;
-  right: 90%;
-  width: 150px;
-  height: 150px;
-  background: rgba(96, 92, 234, 0.6);
-  filter: blur(50px); }
 
 .blur__info_phone {
   top: -20%;
@@ -457,18 +425,36 @@ h4 {
 .flex_row__header {
   width: 100%;
   gap: 108px;
-  align-items: center; }
+  align-items: center;
+  background-color: #5c5c5c; }
 
 .flex_row__logo {
   gap: 8px;
   align-items: center; }
 
 .flex__footer_intro {
-  margin-bottom: 16px; }
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  background-color: #5c5c5c; }
 
-.info_content {
+.flex__btns {
   width: 50%;
-  row-gap: 129px; }
+  justify-content: center;
+  gap: 24px; }
+
+.grid__intro {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 16px;
+  background-color: #5c5c5c; }
+
+.intro_left {
+  width: 100%;
+  row-gap: 129px;
+  background-color: #7dbe6d; }
 
 .info__title {
   padding-top: 20%; }
@@ -483,9 +469,25 @@ h4 {
   padding-top: 30px;
   padding-left: 20px; }
 
-.info_image__image {
+.intro_right {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #0066ff; }
+
+.blur__info_image {
+  top: -50%;
+  right: 90%;
+  width: 100%;
+  height: 100%;
+  background: rgba(96, 92, 234, 0.6);
+  filter: blur(50px); }
+
+.image__intro {
+  width: auto;
   object-fit: contain;
-  z-index: 10; }
+  z-index: 10;
+  margin: 0 auto; }
 
 @media screen and (max-width: 900px) {
   .info__svg {

@@ -49,11 +49,11 @@ const mission = document.querySelector(".flex__mission_left");
 observer.observe(mission);
 
 // *************анимация cookie
-const cookie = document.querySelector(".flex_cookie");
-setTimeout(() => {
-  cookie.classList.remove("vis");
-}, 500);
-function hiddenCookie() {
-  console.log("hide");
-  cookie.classList.add("vis");
-}
+// const cookie = document.querySelector(".flex_cookie");
+// setTimeout(() => {
+//   cookie.classList.remove("vis");
+// }, 500);
+// function hiddenCookie() {
+//   console.log("hide");
+//   cookie.classList.add("vis");
+// }
