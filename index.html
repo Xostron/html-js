@@ -9,6 +9,7 @@
 
   <body>
     <!-- 1 intro  -->
+    <div class="page">
       <div class="container">
         <header class="flex_row flex_row__header">
           <div class="flex_row flex_row__logo">
@@ -34,54 +35,52 @@
                 d="M13.0016 3.33203C10.608 3.33203 8.66772 5.19675 8.66772 7.4971C8.66772 9.79744 10.608 11.6622 13.0016 11.6622C15.3952 11.6622 17.3356 9.79744 17.3356 7.4971C17.333 5.19777 15.3942 3.33447 13.0016 3.33203ZM13.0016 10.8291C11.0867 10.8291 9.53451 9.33741 9.53451 7.4971C9.53451 5.65678 11.0867 4.16504 13.0016 4.16504C14.9166 4.16504 16.4688 5.65678 16.4688 7.4971C16.4667 9.3364 14.9155 10.8271 13.0016 10.8291Z"
               />
             </svg>
-            <text class="text text__font18_noto text_underline text_transition">Login</text>
+            <text class="text text__font18_noto text_underline text_transition"
+              >Login</text
+            >
           </button>
         </header>
 
         <main class="grid__intro">
-
           <div class="flex_col intro_left">
-            <span class="text__font64 info__title">
+            <span class="text__font64 intro__title">
               A Platform <br />
               that works smarter
             </span>
-            <div class="flex_row flex__info">
-              <div class="info__svg">
-                <svg
-                  width="75"
-                  height="123"
-                  viewBox="0 0 75 123"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <line
-                    x1="72.7213"
-                    y1="1.01842"
-                    x2="1.72128"
-                    y2="121.018"
-                    stroke="white"
-                    stroke-width="4"
-                  />
-                </svg>
-              </div>
-              <div class="info__text">
-                <div class="blur blur__info_image"></div>
-                NoTab allows bars & nightclubs<br>
-                to manage, understand, and grow<br>
+            <div class="flex_row intro__info">
+              <svg
+                class="info__svg"
+                width="75"
+                height="123"
+                viewBox="0 0 75 123"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="72.7213"
+                  y1="1.01842"
+                  x2="1.72128"
+                  y2="121.018"
+                  stroke="white"
+                  stroke-width="4"
+                />
+              </svg>
+              <div class="text__font20 intro__text">
+                <div class="blur blur__intro_text"></div>
+                NoTab allows bars & nightclubs
+                to manage, understand, and grow
                 their business from a single dashboard
               </div>
             </div>
           </div>
-
+          <div class="blur blur__intro_phone"></div>
           <div class="flex_row intro_right">
-            <div class="blur blur__info_phone"></div>
             <img
               class="image__intro"
               src="./landing/source/image/first-phone.png"
               alt=""
             />
           </div>
-
         </main>
 
         <footer class="flex_row flex__footer flex__footer_intro">
@@ -348,7 +347,7 @@
           </div>
         </footer>
 
-    <!-- 2 join cards -->
+        <!-- 2 join cards -->
 
         <!-- <header class="flex_row flex__cards">
           <div class="flex_col flex__card">
@@ -371,8 +370,8 @@
           </div>
         </header> -->
 
-    <!-- 3 mission page -->
-      <!-- <main class="flex_row flex__mission">
+        <!-- 3 mission page -->
+        <!-- <main class="flex_row flex__mission">
         <div class="flex_row flex__mission_left">
           <div class="mission_left__content">
             <div class="blur blur__mission_left"></div>
@@ -398,8 +397,8 @@
           </div>
         </div>
       </main> -->
-    <!-- 4 id scanner page -->
-      <!-- <div class="bg_page_abs bg__idscanner">
+        <!-- 4 id scanner page -->
+        <!-- <div class="bg_page_abs bg__idscanner">
         <div class="bg_page_abs gradient"></div>
         <img
           src="./landing/source/image/louis-hansel-shotsoflouis-_6ZqQc02NYc-unsplash (1).png"
@@ -435,7 +434,7 @@
           </div>
         </main> -->
 
-    <!-- 5 tools page -->
+        <!-- 5 tools page -->
 
         <!-- <main class="flex_row flex__tool">
           <div class="flex_col flex__tool_info">
@@ -491,8 +490,8 @@
           </div>
         </main> -->
 
-    <!-- 6 qr code -->
-      <!-- <div class="bg_page_abs bg__qr">
+        <!-- 6 qr code -->
+        <!-- <div class="bg_page_abs bg__qr">
         <div class="bg_page_abs gradient gradient__qr"></div>
         <div class="flex_row flex__bg_qr">
           <img
@@ -837,7 +836,7 @@
           </div>
         </div>
       </div> -->
-    <!-- 7 easier ordering -->
+        <!-- 7 easier ordering -->
 
         <!-- <main class="flex_col flex__easier">
           <div class="blur blur__easier"></div>
@@ -865,8 +864,8 @@
       </div>
        -->
 
-    <!-- 8 NOTAB -->
-      <!-- <div class="bg_page_abs">
+        <!-- 8 NOTAB -->
+        <!-- <div class="bg_page_abs">
         <div class="bg_page_abs gradient gradient__notab_p8"></div>
         <span class="bg__text_notab">
           NOTABNOTABNOTAB<br />
@@ -884,8 +883,7 @@
           class="img__notab"
         /> -->
 
-
-    <!--9 FORM -->
+        <!--9 FORM -->
 
         <!-- <header class="flex_col flex__form_header">
           <span class="text__font51"> Get In Touch </span>
@@ -1240,23 +1238,23 @@
         <div class="blur blur_form  blur2"></div>
         <div class=" blur_form blur3"></div> -->
 
-    <!-- cookie -->
-    <div class="flex_cookie vis flex_row">
-      <div class="container_row">
-        <span class="cookie__text">
-          We use cookie to improve your experience on our site. By using our
-          site you consent cookies.
-        </span>
-        <button
-          class="button button__text button__cookie"
-          onclick="hiddenCookie()"
-        >
-          OK
-        </button>
+        <!-- cookie -->
+        <div class="flex_cookie vis flex_row">
+          <div class="container_row">
+            <span class="cookie__text">
+              We use cookie to improve your experience on our site. By using our
+              site you consent cookies.
+            </span>
+            <button
+              class="button button__text button__cookie"
+              onclick="hiddenCookie()"
+            >
+              OK
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
     </div>
     <script src="./landing/script/index.js"></script>
   </body>
 </html>
-

@@ -94,13 +94,13 @@ h4 {
   .text__font20 {
     font-size: 18px;
   }
-  .text__font35{
+  .text__font35 {
     font-size: 30px;
   }
   .text__font51 {
     font-size: 35px;
   }
-  .text__font64{
+  .text__font64 {
     font-size: 35px;
   }
 }
@@ -115,58 +115,28 @@ h4 {
   .text__font20 {
     font-size: 16px;
   }
-  .text__font35{
+  .text__font35 {
     font-size: 24px;
   }
   .text__font51 {
     font-size: 24px;
   }
-  .text__font64{
+  .text__font64 {
     font-size: 35px;
   }
 }
-// полноэкранный контейнер - landing блоки
+// landing page
 .page {
   width: 100%;
-  // height: 100vh;
   background-color: $bgcolor;
   overflow: hidden;
   position: relative;
 }
-.page_100 {
-  // height: 100vh;
-}
-.page_120 {
-  // height: 120vh;
-  // background-color: #5c5c5c;
-}
-.page_180 {
-  // height: 180vh;
-}
-.page_250 {
-  // height: 250vh;
-}
-.page_40 {
-  // height: 40vh;
-}
 // ширина контента на странице
 .container {
   width: 100%;
-  // height: 100%;
   max-width: 88%;
   margin: 0 auto;
-  // display: flex;
-  // flex-direction: column;
-  position: relative;
-}
-.container_row {
-  width: 100%;
-  height: 100%;
-  max-width: 88%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: relative;
 }
 @media screen and (max-width: 1000px) {
@@ -209,13 +179,13 @@ h4 {
 .text__font20 {
   @extend %font_regular20;
 }
-.text__font35{
+.text__font35 {
   @extend %font_title35;
 }
 .text__font51 {
   @extend %font_regular51;
 }
-.text__font64{
+.text__font64 {
   @extend %font_regular64;
 }
 // CSS Кнопки
@@ -340,11 +310,6 @@ h4 {
   padding-bottom: 85.85px;
 }
 
-.flex__info {
-  gap: 16px;
-  align-items: flex-end;
-}
-
 .flex__tool {
   width: 100%;
   height: 100%;
@@ -378,14 +343,7 @@ h4 {
   right: 0;
   width: 100%;
   height: 100%;
-}
-
-.blur__info_phone {
-  top: -20%;
-  right: -10%;
-  background: rgba(250, 0, 255, 0.2);
-  filter: blur(125px);
-  transform: rotate(-105.26deg);
+  z-index: 0;
 }
 .blur__mission_left {
   background: #ffffff;
@@ -517,13 +475,13 @@ h4 {
   left: 50%;
   transform: translate3d(-50%, -80%, 0);
 }
-// ======================= 1 страница =======================
+// ======================= intro =======================
 // header
 .flex_row__header {
   width: 100%;
   gap: 108px;
   align-items: center;
-  background-color: #5c5c5c;
+  padding: 23px 0 18px 0;
 }
 .flex_row__logo {
   gap: 8px;
@@ -532,9 +490,7 @@ h4 {
 // footer
 .flex__footer_intro {
   width: 100%;
-  position: absolute;
-  bottom: 0%;
-  background-color: #5c5c5c;
+  margin-bottom: 25px;
 }
 .flex__btns {
   width: 50%;
@@ -542,97 +498,132 @@ h4 {
   gap: 24px;
 }
 // content
-.grid__intro{
+.grid__intro {
   width: 100%;
-  height: auto;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  margin-top: 16px;
-  background-color: #5c5c5c;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 83px;
+  position: relative;
 }
 // left
 .intro_left {
   width: 100%;
   row-gap: 129px;
-  background-color: #7dbe6d;
+  z-index: 10;
 }
-.info__title {
-  padding-top: 20%;
+.intro__title {
+  padding-top: 125px;
+}
+.intro__info {
+  align-items: flex-end;
+  position: relative;
 }
 .info__svg {
-  position: relative;
 }
-.info__text {
+.intro__text {
   position: relative;
-  @extend %font_regular20;
-  max-width: 390px;
-  min-width: 390px;
-  padding-top: 30px;
-  padding-left: 20px;
+  max-width: 380px;
+  height: 81px;
+  padding-left: 21px;
+}
+.blur__intro_text {
+  top: -110%;
+  right: 85%;
+  width: 125px;
+  height: 125px;
+  background: rgba(96, 92, 234, 0.6);
+  filter: blur(50px);
 }
 // right
 .intro_right {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  background-color: #0066ff;
-}
-.blur__info_image {
-  top: -50%;
-  right: 90%;
-  width: 100%;
-  height: 100%;
-  background: rgba(96, 92, 234, 0.6);
-  filter: blur(50px);
+  z-index: 10;
 }
 .image__intro {
   width: auto;
   object-fit: contain;
-  z-index: 10;
   margin: 0 auto;
 }
-
-
+.blur__intro_phone {
+  top: 0%;
+  right: -30%;
+  width: 662.63px;
+  height: 783.03px;
+  background: rgba(250, 0, 255, 0.2);
+  filter: blur(125px);
+  transform: rotate(-105.26deg);
+}
 // adaptive tablet
 @media screen and (max-width: 900px) {
   .info__svg {
     display: none;
   }
-  .info__text {
-    padding-top: 0px;
+  .intro_left {
+    row-gap: 24px;
+  }
+  .intro__text {
     padding-left: 0px;
+  }
+  .flex__footer_intro {
+    flex-direction: column;
+    row-gap: 34px;
   }
 }
 // adaptive mobile
 @media screen and (max-width: 500px) {
   // header
   .flex_row__header {
-    // width: 100%;
     margin-top: 40px;
     gap: 0px;
     justify-content: space-between;
-    // align-items: center;
+    padding: 0;
   }
   .logo__img {
     width: 51.73px;
     height: 52.69px;
-  }
-  // footer
-  .flex__footer_intro {
-    width: 100%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    flex-direction: column;
-    row-gap: 34px;
   }
   .flex__btns {
     flex-direction: column;
     row-gap: 24px;
   }
   // content
-
+  .grid__intro {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 65px;
+    margin-bottom: 55px;
+  }
+  .intro_left {
+    height: 323px;
+    row-gap: 24px;
+  }
+  .intro__title{
+    width: 207px;
+    padding-top: 35px;
+  }
+  .intro__text {
+    max-width: 240px;
+    min-width: 200px;
+    height: 88px;
+  }
+  .intro_right {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0%;
+    right: -14%;
+  }
+  .image__intro{
+    width: 161px;
+    height: 323px;
+  }
+  .blur__intro_phone {
+    top: -30%;
+    width: 363.95px;
+    height: 430.08px;
+  }
 }
 // ======================= 2 страница =======================
 // карточка

@@ -23,7 +23,7 @@
   color: white;
   weight: 500; }
 
-.text__font20, .info__text, .flex__text_item {
+.text__font20, .flex__text_item {
   font-size: 20px;
   font-family: Noto sans;
   color: white;
@@ -123,16 +123,6 @@ h4 {
   width: 100%;
   max-width: 88%;
   margin: 0 auto;
-  position: relative; }
-
-.container_row {
-  width: 100%;
-  height: 100%;
-  max-width: 88%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: relative; }
 
 @media screen and (max-width: 1000px) {
@@ -264,10 +254,6 @@ h4 {
   align-items: flex-start;
   padding-bottom: 85.85px; }
 
-.flex__info {
-  gap: 16px;
-  align-items: flex-end; }
-
 .flex__tool {
   width: 100%;
   height: 100%; }
@@ -298,14 +284,8 @@ h4 {
   top: 0;
   right: 0;
   width: 100%;
-  height: 100%; }
-
-.blur__info_phone {
-  top: -20%;
-  right: -10%;
-  background: rgba(250, 0, 255, 0.2);
-  filter: blur(125px);
-  transform: rotate(-105.26deg); }
+  height: 100%;
+  z-index: 0; }
 
 .blur__mission_left {
   background: #ffffff;
@@ -426,7 +406,7 @@ h4 {
   width: 100%;
   gap: 108px;
   align-items: center;
-  background-color: #5c5c5c; }
+  padding: 23px 0 18px 0; }
 
 .flex_row__logo {
   gap: 8px;
@@ -434,9 +414,7 @@ h4 {
 
 .flex__footer_intro {
   width: 100%;
-  position: absolute;
-  bottom: 0%;
-  background-color: #5c5c5c; }
+  margin-bottom: 25px; }
 
 .flex__btns {
   width: 50%;
@@ -445,79 +423,119 @@ h4 {
 
 .grid__intro {
   width: 100%;
-  height: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-top: 16px;
-  background-color: #5c5c5c; }
+  margin-bottom: 83px;
+  position: relative; }
 
 .intro_left {
   width: 100%;
   row-gap: 129px;
-  background-color: #7dbe6d; }
+  z-index: 10; }
 
-.info__title {
-  padding-top: 20%; }
+.intro__title {
+  padding-top: 125px; }
 
-.info__svg {
+.intro__info {
+  align-items: flex-end;
   position: relative; }
 
-.info__text {
+.intro__text {
   position: relative;
-  max-width: 390px;
-  min-width: 390px;
-  padding-top: 30px;
-  padding-left: 20px; }
+  max-width: 380px;
+  height: 81px;
+  padding-left: 21px; }
+
+.blur__intro_text {
+  top: -110%;
+  right: 85%;
+  width: 125px;
+  height: 125px;
+  background: rgba(96, 92, 234, 0.6);
+  filter: blur(50px); }
 
 .intro_right {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  background-color: #0066ff; }
-
-.blur__info_image {
-  top: -50%;
-  right: 90%;
-  width: 100%;
-  height: 100%;
-  background: rgba(96, 92, 234, 0.6);
-  filter: blur(50px); }
+  z-index: 10; }
 
 .image__intro {
   width: auto;
   object-fit: contain;
-  z-index: 10;
   margin: 0 auto; }
+
+.blur__intro_phone {
+  top: 0%;
+  right: -30%;
+  width: 662.63px;
+  height: 783.03px;
+  background: rgba(250, 0, 255, 0.2);
+  filter: blur(125px);
+  transform: rotate(-105.26deg); }
 
 @media screen and (max-width: 900px) {
   .info__svg {
     display: none; }
 
-  .info__text {
-    padding-top: 0px;
-    padding-left: 0px; } }
+  .intro_left {
+    row-gap: 24px; }
+
+  .intro__text {
+    padding-left: 0px; }
+
+  .flex__footer_intro {
+    flex-direction: column;
+    row-gap: 34px; } }
 @media screen and (max-width: 500px) {
   .flex_row__header {
     margin-top: 40px;
     gap: 0px;
-    justify-content: space-between; }
+    justify-content: space-between;
+    padding: 0; }
 
   .logo__img {
     width: 51.73px;
     height: 52.69px; }
 
-  .flex__footer_intro {
-    width: 100%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    flex-direction: column;
-    row-gap: 34px; }
-
   .flex__btns {
     flex-direction: column;
-    row-gap: 24px; } }
+    row-gap: 24px; }
+
+  .grid__intro {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 65px;
+    margin-bottom: 55px; }
+
+  .intro_left {
+    height: 323px;
+    row-gap: 24px; }
+
+  .intro__title {
+    width: 207px;
+    padding-top: 35px; }
+
+  .intro__text {
+    max-width: 240px;
+    min-width: 200px;
+    height: 88px; }
+
+  .intro_right {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0%;
+    right: -14%; }
+
+  .image__intro {
+    width: 161px;
+    height: 323px; }
+
+  .blur__intro_phone {
+    top: -30%;
+    width: 363.95px;
+    height: 430.08px; } }
 .flex__cards {
   gap: 5%;
   padding-top: 61px; }
