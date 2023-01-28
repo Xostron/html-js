@@ -29,13 +29,13 @@
   color: white;
   weight: 500; }
 
-.info__title {
+.text__font64 {
   font-size: 64px;
   font-family: Montserrat;
   color: white;
   weight: 700; }
 
-.flex__footer_intro {
+.text__font35 {
   font-size: 35px;
   font-family: Montserrat;
   color: white;
@@ -71,6 +71,48 @@ body {
 *::before {
   box-sizing: border-box; }
 
+h1,
+h2,
+h3,
+h4 {
+  margin: 0; }
+
+@media screen and (max-device-width: 900px) {
+  .text__font18 {
+    font-size: 16px; }
+
+  .text__font18_noto {
+    font-size: 16px; }
+
+  .text__font20 {
+    font-size: 18px; }
+
+  .text__font35 {
+    font-size: 30px; }
+
+  .text__font51 {
+    font-size: 35px; }
+
+  .text__font64 {
+    font-size: 35px; } }
+@media screen and (max-device-width: 500px) {
+  .text__font18 {
+    font-size: 14px; }
+
+  .text__font18_noto {
+    font-size: 14px; }
+
+  .text__font20 {
+    font-size: 16px; }
+
+  .text__font35 {
+    font-size: 24px; }
+
+  .text__font51 {
+    font-size: 24px; }
+
+  .text__font64 {
+    font-size: 35px; } }
 .page {
   width: 100%;
   background-color: #000;
@@ -232,15 +274,6 @@ body {
   display: flex;
   position: relative; }
 
-.flex_row__header {
-  width: 100%;
-  gap: 108px;
-  align-items: center; }
-
-.flex_row__logo {
-  gap: 8px;
-  align-items: center; }
-
 .flex__footer {
   margin-top: auto;
   align-items: center;
@@ -280,7 +313,8 @@ body {
 .flex_col {
   display: flex;
   flex-direction: column;
-  position: relative; }
+  position: relative;
+  min-width: 350px; }
 
 .flex_col__text {
   row-gap: 16px;
@@ -429,6 +463,15 @@ body {
   left: 50%;
   transform: translate3d(-50%, -80%, 0); }
 
+.flex_row__header {
+  width: 100%;
+  gap: 108px;
+  align-items: center; }
+
+.flex_row__logo {
+  gap: 8px;
+  align-items: center; }
+
 .info_content {
   width: 50%;
   row-gap: 129px; }
@@ -450,13 +493,22 @@ body {
   object-fit: contain;
   z-index: 10; }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   .info__svg {
     display: none; }
 
   .info__text {
     padding-top: 0px;
     padding-left: 0px; } }
+@media screen and (max-width: 500px) {
+  .flex_row__header {
+    margin-top: 40px;
+    gap: 0px;
+    justify-content: space-between; }
+
+  .logo__img {
+    width: 51.73px;
+    height: 52.69px; } }
 .flex__cards {
   gap: 5%;
   padding-top: 61px; }

@@ -1,7 +1,7 @@
 $bgcolor: #000;
 $color_font: rgb(255, 255, 255);
 $color_hover: rgb(250, 0, 255);
-
+// шаблоны анимации
 %transition_hover {
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
@@ -10,10 +10,11 @@ $color_hover: rgb(250, 0, 255);
   transition-duration: 2s;
   transition-timing-function: ease-in-out;
 }
-%transition_cookie{
+%transition_cookie {
   transition-timing-function: ease-in-out;
   transition-duration: 1s;
 }
+// шаблоны шрифтов
 %font_regular14 {
   font-size: 14px;
   font-family: Noto sans;
@@ -32,7 +33,7 @@ $color_hover: rgb(250, 0, 255);
   color: $color_font;
   weight: 500;
 }
-%font_title64 {
+%font_regular64 {
   font-size: 64px;
   font-family: Montserrat;
   color: $color_font;
@@ -63,7 +64,7 @@ $color_hover: rgb(250, 0, 255);
   font-size: 51px;
   color: $color_font;
 }
-// html, body
+//сброс стилей браузера
 html,
 body {
   padding: 0;
@@ -75,7 +76,56 @@ body {
 *::before {
   box-sizing: border-box;
 }
-// landing контейнер
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+// адаптивность экрана для шрифтов
+// tablet
+@media screen and (max-device-width: 900px) {
+  .text__font18 {
+    font-size: 16px;
+  }
+  .text__font18_noto {
+    font-size: 16px;
+  }
+  .text__font20 {
+    font-size: 18px;
+  }
+  .text__font35{
+    font-size: 30px;
+  }
+  .text__font51 {
+    font-size: 35px;
+  }
+  .text__font64{
+    font-size: 35px;
+  }
+}
+// mobile
+@media screen and (max-device-width: 500px) {
+  .text__font18 {
+    font-size: 14px;
+  }
+  .text__font18_noto {
+    font-size: 14px;
+  }
+  .text__font20 {
+    font-size: 16px;
+  }
+  .text__font35{
+    font-size: 24px;
+  }
+  .text__font51 {
+    font-size: 24px;
+  }
+  .text__font64{
+    font-size: 35px;
+  }
+}
+// полноэкранный контейнер - landing блоки
 .page {
   width: 100%;
   background-color: $bgcolor;
@@ -98,7 +148,7 @@ body {
 .page_40 {
   height: 40vh;
 }
-// container
+// ширина контента на странице
 .container {
   width: 100%;
   height: 100%;
@@ -158,10 +208,15 @@ body {
 .text__font20 {
   @extend %font_regular20;
 }
+.text__font35{
+  @extend %font_title35;
+}
 .text__font51 {
   @extend %font_regular51;
 }
-
+.text__font64{
+  @extend %font_regular64;
+}
 // CSS Кнопки
 .button {
   @extend %font_regular18;
@@ -169,21 +224,18 @@ body {
   outline: none;
   cursor: pointer;
 }
-
 .button__icon_text {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 14px;
 }
-
 .button__icon {
   border: 1.5px solid $color_font;
   border-radius: 8px;
   background-color: transparent;
   @extend %transition_hover;
 }
-
 .button__text {
   display: flex;
   align-items: center;
@@ -191,7 +243,6 @@ body {
   border: none;
   @extend %transition_hover;
 }
-
 .button__header {
   border: none;
   height: fit-content;
@@ -205,14 +256,12 @@ body {
     }
   }
 }
-
 .button__icon_hover {
   transition-property: border-color;
   &:hover {
     border-color: $color_hover;
   }
 }
-
 .button__footer {
   height: 51.3px;
   padding: 0 11px;
@@ -221,7 +270,6 @@ body {
   height: 81.27px;
   padding: 0 20px;
 }
-
 .button__card {
   @extend %font_regular24;
   width: fit-content;
@@ -231,7 +279,6 @@ body {
     color: $color_hover;
   }
 }
-
 .button__cookie {
   width: 132px;
   height: 50px;
@@ -245,7 +292,6 @@ body {
     border-color: $color_hover;
   }
 }
-
 .button__form {
   width: 398px;
   height: 80px;
@@ -276,21 +322,10 @@ body {
   }
 }
 
-// flex строка
+// flex контейнеры - контент страницы
 .flex_row {
   display: flex;
   position: relative;
-}
-// 1 page: Заголовок header
-.flex_row__header {
-  width: 100%;
-  gap: 108px;
-  align-items: center;
-}
-// 1 page: logo
-.flex_row__logo {
-  gap: 8px;
-  align-items: center;
 }
 // Footer
 .flex__footer {
@@ -299,7 +334,6 @@ body {
   justify-content: space-between;
 }
 .flex__footer_intro {
-  @extend %font_title35;
   padding: 16px 0;
 }
 .flex__footer_form {
@@ -336,6 +370,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  min-width: 350px;
 }
 .flex_col__text {
   row-gap: 16px;
@@ -411,7 +446,7 @@ body {
   filter: blur(125px);
   transform: rotate(5.78deg);
 }
-.blur_form{
+.blur_form {
   background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
   opacity: 0.3;
   filter: blur(125px);
@@ -501,13 +536,21 @@ body {
   transform: translate3d(-50%, -80%, 0);
 }
 // ======================= 1 страница =======================
-// 1 столбец
+// header
+.flex_row__header {
+  width: 100%;
+  gap: 108px;
+  align-items: center;
+}
+.flex_row__logo {
+  gap: 8px;
+  align-items: center;
+}
 .info_content {
   width: 50%;
   row-gap: 129px;
 }
 .info__title {
-  @extend %font_title64;
   padding-top: 20%;
 }
 .info__svg {
@@ -523,18 +566,32 @@ body {
 }
 // 2 столбец
 .info_image__image {
-  // object-fit: cover;
   object-fit: contain;
   z-index: 10;
 }
-// adaptive 1 page - intro -
-@media screen and (max-width: 1000px) {
+
+// adaptive tablet
+@media screen and (max-width: 900px) {
   .info__svg {
     display: none;
   }
   .info__text {
     padding-top: 0px;
     padding-left: 0px;
+  }
+}
+// adaptive mobile
+@media screen and (max-width: 500px) {
+  .flex_row__header {
+    // width: 100%;
+    margin-top: 40px;
+    gap: 0px;
+    justify-content: space-between;
+    // align-items: center;
+  }
+  .logo__img {
+    width: 51.73px;
+    height: 52.69px;
   }
 }
 // ======================= 2 страница =======================
@@ -606,7 +663,6 @@ body {
   max-width: 358px;
 }
 // ======================= 4 страница =======================
-// content
 .flex__id_scanner {
   width: 100%;
   height: 100%;
@@ -614,6 +670,7 @@ body {
   justify-content: space-between;
   z-index: 10;
 }
+
 .flex__id_scanner_images {
   align-items: center;
   width: 58%;
