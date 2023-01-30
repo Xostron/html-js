@@ -41,7 +41,7 @@
           </button>
         </header>
 
-        <main class="grid__intro">
+        <main class="grid grid__intro">
           <div class="flex_col intro_left">
             <span class="text__font64 intro__title">
               A Platform <br />
@@ -65,10 +65,9 @@
                   stroke-width="4"
                 />
               </svg>
-              <div class="text__font20 intro__text">
+              <div class="text text__font20 intro__text">
                 <div class="blur blur__intro_text"></div>
-                NoTab allows bars & nightclubs
-                to manage, understand, and grow
+                NoTab allows bars & nightclubs to manage, understand, and grow
                 their business from a single dashboard
               </div>
             </div>
@@ -349,106 +348,135 @@
 
         <!-- 2 join cards -->
 
-        <!-- <header class="flex_row flex__cards">
+        <div class="grid grid__cards">
           <div class="flex_col flex__card">
-            <span class="card__title">
+            <span class="text__font30">
               Would like to become a member, please contact us
             </span>
             <a
-                class="link link__card"
-                href="http://support@notab.com"
-                target="_blank"
-              >
-                support@notab.com
-              </a>
+              class="text__font24 link link__card"
+              href="http://support@notab.com"
+              target="_blank"
+            >
+              support@notab.com
+            </a>
           </div>
           <div class="flex_col flex__card">
-            <span class="card_title">
-              Already a partner?
-            </span>
-            <button class="button button__text button__card">Login</button>
+            <span class="text__font30"> Already a partner? </span>
+            <button class="text__font24 button button__text button__card">
+              Login
+            </button>
           </div>
-        </header> -->
+        </div>
 
-        <!-- 3 mission page -->
-        <!-- <main class="flex_row flex__mission">
-        <div class="flex_row flex__mission_left">
-          <div class="mission_left__content">
-            <div class="blur blur__mission_left"></div>
+        <!-- 3 mission  -->
+        <!-- для экранов больше 768px-->
+        <main class="flex_row flex__mission_more768">
+          <div class="flex_row flex__mission_left">
+            <div class="mission_left__content">
+              <div class="blur blur__mission_left"></div>
+              <img
+                width="1000px"
+                height="513px"
+                src="./landing/source/image/Group 567.png"
+                alt=""
+                class="mission_left__image"
+              />
+            </div>
+          </div>
+          <div class="mission_right">
+            <div class="flex_col flex_mission__right_content">
+              <div class="blur blur__mission_right"></div>
+              <span class="mission__right_block text__font51">
+                Our mission<br />
+                and vision
+              </span>
+              <span class="mission__right_block text__font18_nono">
+                While technology is our sweet spot,<br />
+                we’ve developed our vision alongside<br />
+                our customers to ensure your<br />
+                everyday problems are solved<br />
+                through simplistic tools. And as your<br />
+                business grows, we’ll grow right<br />
+                alongside with you.
+              </span>
+            </div>
+          </div>
+        </main>
+        <!-- для экранов меньше 769px -->
+        <main class="flex_col flex__mission_less769">
+          <div class="blur blur__mission_right"></div>
+          <span class="text text__font51 mission__title">
+            Our mission and vision
+          </span>
+          <span class="text text__font18_nono mission__info">
+            While technology is our sweet spot,<br />
+            we’ve developed our vision alongside<br />
+            our customers to ensure your everyday<br />
+            problems are solved through simplistic<br />
+            tools. And as your business grows,<br />
+            we’ll grow right alongside with you.
+          </span>
+          <div class="flex_row mission__block_image">
             <img
-              width="1000px"
-              height="513px"
-              src="./landing/source/image/Group 567.png"
+              width="172px"
+              height="346px"
+              src="./landing/source/image/Group 578.png"
               alt=""
-              class="mission_left__image"
+              class="mission__image"
             />
           </div>
-        </div>
-        <div class="mission_right">
-          <div class="flex_col flex_mission__right_content">
-            <div class="blur blur__mission_right"></div>
-            <span class="mission__right_block text__font51"> Our mission and vision </span>
-            <span class="mission__right_block text__font18">
-              While technology is our sweet spot, we’ve developed our vision
-              alongside our customers to ensure your everyday problems are
-              solved through simplistic tools. And as your business grows, we’ll
-              grow right alongside with you.
-            </span>
-          </div>
-        </div>
-      </main> -->
+        </main>
+
         <!-- 4 id scanner page -->
-        <!-- <div class="bg_page_abs bg__idscanner">
-        <div class="bg_page_abs gradient"></div>
-        <img
-          src="./landing/source/image/louis-hansel-shotsoflouis-_6ZqQc02NYc-unsplash (1).png"
-          alt="bg_image"
-          class="bg_page_abs image__covered"
-        />
-      </div>
+        <div class="id_scanner_wallpaper">
+          <div class="bg_page_abs gradient wallpaper__gradient"></div>
+          <img
+            src="./landing/source/image/louis-hansel-shotsoflouis-_6ZqQc02NYc-unsplash (1).png"
+            alt="bg_image"
+            class="image__covered wallpaper__item_img"
+          />
+        </div>
 
-
-        <main class="flex_row flex__id_scanner">
-          <div class="flex_row flex__id_scanner_images">
+        <main class="grid grid__id_scanner">
+          <div class="grid grid__id_scanner_images">
             <img
-              width="332.56px"
-              height="667.8px"
-              src="./landing/source/image/verifBegin.png"
-              alt=""
-            />
-            <img
+              class="id_scanner__image"
               width="332.56px"
               height="667.8px"
               src="./landing/source/image/verifEnd.png"
+              alt=""
+            />
+            <img
+              class="id_scanner__image"
+              width="332.56px"
+              height="667.8px"
+              src="./landing/source/image/verifBegin.png"
               alt=""
             />
           </div>
 
           <div class="flex_col flex__id_scanner_info">
             <span class="text__font51">ID Scanner</span>
-            <span class="text__font18">
+            <span class="text text__font18_noto">
               Scan, verify, and collect data on each person that walks through
               your door to humanize your data. You also get a digital 86 list as
               well as a citywide ban list to keep your venue safe.
             </span>
           </div>
-        </main> -->
+        </main>
 
         <!-- 5 tools page -->
-
-        <!-- <main class="flex_row flex__tool">
+        <main class="grid grid__tool">
           <div class="flex_col flex__tool_info">
             <div class="blur blur__tool"></div>
-            <span class="text__font51 text__tool_title"> 
-              BI Tool Integration 
-            </span>
-            <span class="text__font18_noto text__tool_info">
+            <span class="text__font51"> BI Tool Integration </span>
+            <span class="text text__font18_noto">
               We use Business Intelligence Tool that allows you to be updated
               what is happening in your business just by one click. Track
               revenue and profit by one click.
             </span>
           </div>
-
           <div class="tool__container">
             <div class="tool__components">
               <img
@@ -488,41 +516,44 @@
               />
             </div>
           </div>
-        </main> -->
-
+        </main>
+      </div>
+        
         <!-- 6 qr code -->
-        <!-- <div class="bg_page_abs bg__qr">
-        <div class="bg_page_abs gradient gradient__qr"></div>
-        <div class="flex_row flex__bg_qr">
+        <div class="grid grid__qrcode_wallpaper">
           <img
-            src="./landing/source/image/Nightlife.png"
-            alt="bg_image"
-            class="img__qr_abs"
-          />
-          <img
-            src="./landing/source/image/marcela-laskoski-YrtFlrLo2DQ-unsplash (1).png"
-            alt="bg_image"
-            class="image__covered image__qr"
-          />
-          <img
-            src="./landing/source/image/ash-edmonds-fsI-_MRsic0-unsplash (1).png"
-            alt="bg_image"
-            class="image__covered image__qr"
+              src="./landing/source/image/marcela-laskoski-YrtFlrLo2DQ-unsplash (1).png"
+              alt="bg_image"
+              class="image__covered image__qr"
+            />
+            <div class="qr__item_empty"></div>
+            <img
+              src="./landing/source/image/ash-edmonds-fsI-_MRsic0-unsplash (1).png"
+              alt="bg_image"
+              class="image__covered image__qr"
+            />
+          <div class="bg_page_abs gradient gradient__qr"></div>
+          <img 
+          width="138.6px"
+          height="54.2px"
+          src="./landing/source/image/Nightlife.png" 
+          alt="nightlife" 
+          class="bg_page_abs img_nightlife"
           />
         </div>
-      </div>
 
-        <main class="flex_row flex__qr">
+        <div class="container">
+        <main class="grid grid__qr">
           <div class="flex_col flex__qr_info">
             <span class="text__font51">QR code</span>
-            <span class="text__font18_noto">
+            <span class="text text__font18_noto">
               No more conflict situations due to wrong order. The guest selects
               the positions, and after that an individual QR code of his order
               is generated
             </span>
             <div class="flex_row flex__qr_btns">
               <button
-                class="button button__footer button__icon button__icon_hover"
+                class="button button__footer button__icon button__icon_hover qr__btn"
               >
                 <svg
                   width="137"
@@ -625,7 +656,7 @@
                 </svg>
               </button>
               <button
-                class="button button__footer button__icon button__icon_hover"
+                class="button button__footer button__icon button__icon_hover qr__btn"
               >
                 <svg
                   width="159"
@@ -781,61 +812,69 @@
               </button>
             </div>
           </div>
-          <div class="flex_row flex__qr_images">
+          <div class="grid grid__qr_phones">
             <img
               width="332.56px"
               height="667.8px"
               src="./landing/source/image/Group 541.png"
               alt="1"
-              class="qr__item1"
+              class="qr__img_phone qr__img_phone_item"
             />
             <img
               width="332.56px"
               height="667.8px"
               src="./landing/source/image/Group 542.png"
               alt="2"
-              class="qr__item2"
+              class="qr__img_phone"
             />
           </div>
         </main>
 
-
-      <div class="bg_page_abs bg__notab">
-        <img
-          src="./landing/source/image/Group 550.png"
-          alt="3"
-          class="image__notab"
-        />
-        <div class="blur blur__qr"></div>
-        <img
-          src="./landing/source/image/Group 533.png"
-          alt="3"
-          class="image__notab_phone"
-        />
-        <svg
-          class="svg svg__arrow"
-          width="81"
-          height="70"
-          viewBox="0 0 81 70"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0.132183 4.08355C-0.0458939 3.8725 -0.0191615 3.55704 0.191891 3.37897L3.6312 0.477039C3.84225 0.298962 4.1577 0.325695 4.33578 0.536748C4.51385 0.7478 4.48712 1.06325 4.27607 1.24133L1.21891 3.82082L3.7984 6.87798C3.97648 7.08903 3.94974 7.40448 3.73869 7.58256C3.52764 7.76064 3.21219 7.73391 3.03411 7.52285L0.132183 4.08355ZM79.0196 69.3236C77.5304 58.6552 72.564 43.633 60.6464 30.6611C48.7381 17.6993 29.8581 6.74959 0.472107 4.25933L0.556548 3.2629C30.1708 5.77251 49.2909 16.8229 61.3828 29.9845C73.4653 43.136 78.499 58.3606 80.01 69.1854L79.0196 69.3236Z"
-            fill="white"
+<!-- 7 qr notab -->
+        <div class="grid grid__qr_notab">
+          <div class="flex_row qr__notab_phone">
+            <img
+            src="./landing/source/image/Group 533.png"
+            alt="3"
+            class="image__notab_item_phone"
           />
-        </svg>
-        <span class="text__arrow"> Scan QR-code </span>
-        <div class="flex_row flex__qr_footer">
-          <div class="text__font51">
-            Generate your<br />
-            QR-code
+           <!-- absolute -->
+           <div class="blur blur__qr"></div>
+           <img
+             src="./landing/source/image/Group 584.png"
+             alt="3"
+             class="bg_page_abs image__notab"
+           />
+           
+           <svg
+             class="svg svg__arrow"
+             width="81"
+             height="70"
+             viewBox="0 0 81 70"
+             xmlns="http://www.w3.org/2000/svg"
+           >
+             <path
+               d="M0.132183 4.08355C-0.0458939 3.8725 -0.0191615 3.55704 0.191891 3.37897L3.6312 0.477039C3.84225 0.298962 4.1577 0.325695 4.33578 0.536748C4.51385 0.7478 4.48712 1.06325 4.27607 1.24133L1.21891 3.82082L3.7984 6.87798C3.97648 7.08903 3.94974 7.40448 3.73869 7.58256C3.52764 7.76064 3.21219 7.73391 3.03411 7.52285L0.132183 4.08355ZM79.0196 69.3236C77.5304 58.6552 72.564 43.633 60.6464 30.6611C48.7381 17.6993 29.8581 6.74959 0.472107 4.25933L0.556548 3.2629C30.1708 5.77251 49.2909 16.8229 61.3828 29.9845C73.4653 43.136 78.499 58.3606 80.01 69.1854L79.0196 69.3236Z"
+               fill="white"
+             />
+           </svg>
+           <span class="text__arrow text__font18_noto"> Scan QR-code </span>
           </div>
-          <div class="text__font18_noto">
-            The guest QR code is scanned<br />
-            by the staff and automatically sent
+          
+          <div class="flex_row flex__qr_footer">
+            <div class="text__font51 qr__footer_text">
+              Generate your
+              QR-code
+            </div>
+            <div class="text__font18_noto">
+              The guest QR code is scanned<br />
+              by the staff and automatically sent
+            </div>
           </div>
+         
         </div>
-      </div> -->
+
+        
         <!-- 7 easier ordering -->
 
         <!-- <main class="flex_col flex__easier">
@@ -1253,7 +1292,7 @@
             </button>
           </div>
         </div>
-      </div>
+      
     </div>
     <script src="./landing/script/index.js"></script>
   </body>
