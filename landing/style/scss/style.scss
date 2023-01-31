@@ -378,17 +378,6 @@ h4 {
   opacity: 0.2;
   filter: blur(118.009px);
 }
-.blur__qr {
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  width: 1022px;
-  height: 950px;
-  border-radius: 50%;
-  background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
-  opacity: 0.2;
-  filter: blur(155.784px);
-}
 .blur_form {
   background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
   opacity: 0.3;
@@ -439,15 +428,7 @@ h4 {
     #000000 83.92%
   );
 }
-.gradient__notab_p8 {
-  // opacity: 0.9;
-  background: linear-gradient(
-    360deg,
-    #000000 6.8%,
-    rgba(0, 0, 0, 0) 51.62%,
-    #000000 97.38%
-  );
-}
+
 // bg image
 .image__covered {
   object-fit: cover;
@@ -1218,6 +1199,17 @@ h4 {
 .qr__footer_text {
   width: 317px;
 }
+.blur__qr {
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 1022px;
+  height: 950px;
+  border-radius: 50%;
+  background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
+  opacity: 0.2;
+  filter: blur(155.784px);
+}
 // tablet
 @media screen and (max-width: 900px) {
   .qr__notab_phone {
@@ -1238,6 +1230,11 @@ h4 {
   }
   .qr__footer_text {
     width: fit-content;
+  }
+  .blur__qr {
+    width: 500px;
+    height: 500px;
+    filter: blur(155.784px);
   }
 }
 // mobile
@@ -1264,6 +1261,11 @@ h4 {
     position: absolute;
     top: 74%;
     left: -57%;
+  }
+  .blur__qr {
+    width: 150px;
+    height: 150px;
+    filter: blur(155.784px);
   }
 }
 
@@ -1396,7 +1398,13 @@ h4 {
   }
 }
 // ======================= 9 страница =======================
-
+.block__notab {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 .bg__text_notab {
   font-family: "Manrope";
   font-style: normal;
@@ -1406,14 +1414,37 @@ h4 {
   color: transparent;
   -webkit-text-stroke: 2px #8b8b8b;
   position: absolute;
-  right: -3%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 0;
 }
 .img__notab {
-  z-index: 100;
-  margin: auto;
+  max-width: 859px;
+  min-width: 350px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  z-index: 10;
+}
+.gradient__notab_p8 {
+  left: -7%;
+  width: 100vw;
+  // opacity: 0.9;
+  background: linear-gradient(
+    360deg,
+    #000000 6.8%,
+    rgba(0, 0, 0, 0) 51.62%,
+    #000000 97.38%
+  );
+}
+// mobile
+@media screen and (max-width: 500px) {
+.block__notab{
+  display: none;
+}
 }
 // ======================= 10 страница =======================
+
 .flex__form_header {
   width: 100%;
   align-items: center;
