@@ -89,6 +89,7 @@
               class="button button__footer button__icon_hover button__icon"
             >
               <svg
+                class="svg__apple"
                 width="137"
                 height="33"
                 viewBox="0 0 137 33"
@@ -192,6 +193,7 @@
               class="button button__footer button__icon_hover button__icon"
             >
               <svg
+                class="svg__google"
                 width="159"
                 height="36"
                 viewBox="0 0 159 36"
@@ -553,9 +555,10 @@
             </span>
             <div class="flex_row flex__qr_btns">
               <button
-                class="button button__footer button__icon button__icon_hover qr__btn"
+                class="button button__footer button__icon button__icon_hover"
               >
                 <svg
+                  class="svg__apple"
                   width="137"
                   height="33"
                   viewBox="0 0 137 33"
@@ -656,9 +659,10 @@
                 </svg>
               </button>
               <button
-                class="button button__footer button__icon button__icon_hover qr__btn"
+                class="button button__footer button__icon button__icon_hover"
               >
                 <svg
+                  class="svg__google"
                   width="159"
                   height="36"
                   viewBox="0 0 159 36"
@@ -927,10 +931,10 @@
         <!-- 9 NOTAB -->
         <div class="flex_row block__notab">
           <img
-          src="./landing/source/image/Group 566.png"
-          alt="notab"
-          class="img__notab"
-        />
+            src="./landing/source/image/Group 566.png"
+            alt="notab"
+            class="img__notab"
+          />
           <div class="bg_page_abs gradient gradient__notab_p8"></div>
           <span class="bg__text_notab">
             NOTABNOTABNOTAB<br />
@@ -942,21 +946,24 @@
           </span>
         </div>
 
-        
-
         <!--9 FORM -->
 
-        <!-- <header class="flex_col flex__form_header">
+        <header class="flex_col flex__form_header">
           <span class="text__font51"> Get In Touch </span>
           <span class="text__font18_noto text_center">
             Have questions about Noble or just want to say hello?
-            <br />
+            <span class="new_string"><br /></span>
             Drop us a line and a member of our team will getback to you shortly.
           </span>
         </header>
-        
+
         <iframe name="warhammer" style="display: none"></iframe>
-        <form class="flex_col flex__user_form" action="" method="post" target="warhammer">
+        <form
+          class="flex_col flex__user_form"
+          action=""
+          method="post"
+          target="warhammer"
+        >
           <div class="flex_col flex__user_form_inputs">
             <input
               class="user_form__input"
@@ -1010,23 +1017,24 @@
               required
             ></textarea>
           </div>
-          <div class="user_form__buttons">
-            <input
-              class="button button__text button__form"
-              type="submit"
-              value="Send"
-            />
-          </div>
+          <!-- <div class="user_form__buttons"> -->
+          <input
+            class="button button__text button__form"
+            type="submit"
+            value="Send"
+          />
+          <!-- </div> -->
         </form>
 
         <div class="flex_col flex__dwnl_app">
-          DOWNLOAD OUR APP
+          <span class="text__font30">DOWNLOAD OUR APP</span>
+
           <div class="flex_row flex__btns_app">
             <button
               class="button button__dwnl_app button__icon button__icon_hover"
             >
               <svg
-                class="i_btn__svg"
+                class="svg__apple"
                 width="215.3"
                 height="50.89"
                 viewBox="0 0 137 33"
@@ -1130,6 +1138,7 @@
               class="button button__dwnl_app button__icon button__icon_hover"
             >
               <svg
+                class="svg__google"
                 width="250.69"
                 height="55.28"
                 viewBox="0 0 159 36"
@@ -1283,7 +1292,8 @@
             </button>
           </div>
         </div>
-        <footer class="flex_row flex__footer flex__footer_form">
+
+        <footer class="flex_row flex__footer_form">
           <div class="flex_col flex_col__text">
             <span class="text__font20"> NOTAB</span>
             <span class="text__font18"> Contact us: support@notab.com </span>
@@ -1295,13 +1305,13 @@
           </div>
         </footer>
 
-        <div class="blur blur_form  blur1"></div>
-        <div class="blur blur_form  blur2"></div>
-        <div class=" blur_form blur3"></div> -->
+        <div class="blur blur_form blur1"></div>
+        <div class="blur blur_form blur2"></div>
+        <div class="blur_form blur3"></div>
       </div>
       <!-- cookie -->
       <div class="flex_cookie vis flex_row">
-        <div class="container_row">
+        <div class="flex_row container__cookie">
           <span class="cookie__text">
             We use cookie to improve your experience on our site. By using our
             site you consent cookies.
