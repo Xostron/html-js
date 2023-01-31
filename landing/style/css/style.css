@@ -16,7 +16,7 @@
   color: white;
   weight: 400; }
 
-.text__font18, .text__font18_noto, .button, .text__arrow, .user_form__area,
+.text__font18, .text__font18_noto, .button, .user_form__area,
 .user_form__input, .user_form__button {
   font-size: 18px;
   font-family: Noto sans;
@@ -37,6 +37,12 @@
 
 .text__font35 {
   font-size: 35px;
+  font-family: Montserrat;
+  color: white;
+  weight: 700; }
+
+.text__font21 {
+  font-size: 21px;
   font-family: Montserrat;
   color: white;
   weight: 700; }
@@ -150,7 +156,10 @@ h4 {
     font-size: 24px; }
 
   .text__font64 {
-    font-size: 35px; } }
+    font-size: 35px; }
+
+  .text__font21 {
+    font-size: 18px; } }
 .button {
   background-color: transparent;
   outline: none;
@@ -983,8 +992,7 @@ h4 {
   width: 100%;
   height: auto;
   grid-template-rows: auto auto;
-  justify-items: center;
-  background-color: #0066ff; }
+  justify-items: center; }
 
 .qr__notab_phone {
   width: 100%;
@@ -992,7 +1000,7 @@ h4 {
   order: 1;
   align-items: center;
   justify-content: center;
-  background-color: #5c5c5c; }
+  position: relative; }
 
 .image__notab_item_phone {
   max-width: 332.56px;
@@ -1000,7 +1008,9 @@ h4 {
   width: 40.4%;
   height: auto;
   object-fit: contain;
-  z-index: 10; }
+  z-index: 10;
+  position: relative;
+  left: 80px; }
 
 .flex__qr_footer {
   width: 100%;
@@ -1018,17 +1028,31 @@ h4 {
   left: 50%;
   transform: translate(-50%, -45%); }
 
+.block_arrow_text {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  z-index: 10;
+  position: relative;
+  left: 90px; }
+
 .svg__arrow {
   position: absolute;
   top: 50%;
-  left: calc(70% + 5px);
-  transform: translate3d(-70%, -50%, 0); }
+  left: 0%;
+  transform: translate3d(0%, -50%, 0); }
+
+.svg__arrow2 {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate3d(0%, -50%, 0); }
 
 .text__arrow {
   position: absolute;
-  top: 59%;
-  left: calc(74% + 5px);
-  transform: translate3d(-74%, -59%, 0); }
+  top: 70%;
+  left: 30%; }
 
 .qr__footer_text {
   width: 317px; }
@@ -1037,7 +1061,7 @@ h4 {
   .qr__notab_phone {
     order: 2;
     padding-top: 70px;
-    padding-bottom: 116px; }
+    padding-bottom: 170px; }
 
   .flex__qr_footer {
     flex-direction: column;
@@ -1052,9 +1076,29 @@ h4 {
 
   .qr__footer_text {
     width: fit-content; } }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .image__notab {
-    width: 130%; } }
+    width: 130%; }
+
+  .block_arrow_text {
+    width: 150px;
+    height: 250px;
+    position: relative;
+    z-index: 10;
+    position: relative;
+    top: 50%;
+    left: 90px; }
+
+  .svg__arrow {
+    display: none; }
+
+  .svg__arrow2 {
+    display: flex; }
+
+  .text__arrow {
+    position: absolute;
+    top: 74%;
+    left: -57%; } }
 .flex__easier {
   width: 90%;
   align-items: flex-end;
